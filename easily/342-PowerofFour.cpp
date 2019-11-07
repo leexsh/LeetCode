@@ -16,15 +16,45 @@ LeetCode-342 题目：4的幂
 思路：
 
  */
+// 循环
 bool isPowerOfFour1(int num) {
-
+    if(num < 1)
+        return false;
+    if(num == 1)
+        return true;
+    int m = 1;
+    while(m < num){
+        m *= 4;
+    }
+    return m == num;
 }
+
+// 循环
 bool isPowerOfFour2(int num) {
+    if(num < 1)
+        return false;
+    if(num == 1)
+        return true;
+    while(num % 4 == 0){
+        num /= 4;
+    }
+    return num == 1;
+}
 
-}
+// 递归
 bool isPowerOfFour3(int num) {
-    
+    if(num < 1)
+        return false;
+    if(num == 1)
+        return true;
+    else{
+        if(num % 4 == 0)
+            return isPowerOfFour3(num /= 4);
+        else 
+            return false;
+    }
 }
+
 bool isPowerOfFour4(int num) {
 
 }
