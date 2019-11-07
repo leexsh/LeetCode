@@ -3,4 +3,5 @@
 ## demo.cpp : 创建每个文件的模板
 ## test.cpp : 写一些提交代码测试用例的文件
 ## .vscode : 是vscode环境下C++的配置文件
+## #include"bits/stdc++.h"尽量不要使用 会使编译时间过长
 # LeetCode
