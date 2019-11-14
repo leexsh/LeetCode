@@ -14,7 +14,7 @@ LeetCode-283 题目：移动0
 /*
 思路：
     把每一个非0的数前移  后面补0d
-    
+
  */
 
 void moveZeroes(vector<int>& nums) {
