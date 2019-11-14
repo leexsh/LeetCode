@@ -1,4 +1,5 @@
-#include "bits/stdc++.h"
+#include<vector>
+#include<iostream>
 using namespace std;
 /* 
 LeetCode-118 题目：杨辉三角
@@ -25,6 +26,7 @@ vector<vector<int>> generate(int numRows) {
     }
     return ans;
 }
+
 int main(){
 
     system("pause");
