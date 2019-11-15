@@ -20,6 +20,7 @@ LeetCode-33 题目：搜索旋转排序数组
     分别在两个区间上二分
  */
 
+// 时间复杂度为O(N)
 int search(vector<int>& nums, int target) {
     if(nums.size() < 1)
         return -1;
@@ -67,6 +68,47 @@ int search(vector<int>& nums, int target) {
     }
     return -1;
 }
+
+// 改进后的时间复杂度为O(logN)
+int search(vector<int>& nums, int target) {
+    if (nums.empty()) return -1;
+    int left = 0;
+    int right = nums.size() - 1;
+    while (left <= right) {
+        int mid = left + ((right - left)>>1);
+        if (nums[mid] == target) {
+            return mid;
+        }
+        //mid位于右半部分
+        if (nums[mid] < nums[right]) {
+            //target <= nums[right],说明target位于右半部分
+            //nums[mid] < target,说明target位于右半部分的右半部分,left = mid + 1
+            if (target <= nums[right] && nums[mid] < target) {
+                left = mid + 1;
+            }
+            //target > nums[right],说明target位于左半部分,right = mid - 1
+            //target < nums[mid],说明target位于右半部分的左半部分,right = mid - 1
+            else {
+                right = mid - 1;
+            }
+        }
+        //mid位于左半部分
+        else if (nums[mid] >= nums[right]) {
+            //nums[left] <= target,说明target位于左半部分
+            //target < nums[mid],说明target位于左半部分的左半部分,right = mid - 1
+            if (nums[left] <= target && target < nums[mid]) {
+                right = mid - 1;
+            }
+            //nums[left] > target,说明target位于右半部分,left = mid + 1
+            //target > nums[mid],说明target位于左半部分的右半部分,left = mid + 1
+            else {
+                left = mid + 1;
+            }
+        }
+    }
+    return -1;
+}
+
 int main(){
     vector<int> vec{4,5,6,7,0,1,2};
     int x = search(vec, 4);
@@ -74,3 +116,5 @@ int main(){
     system("pause");
     return 0;
 }
+
+
