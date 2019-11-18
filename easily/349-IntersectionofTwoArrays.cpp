@@ -1,61 +1,59 @@
 #include<vector>
 #include<iostream>
 #include<set>
+#include<algorithm>
 using namespace std;
 /* 
-LeetCode- é¢˜ç›®ï¼š
-
+LeetCode-349 ÌâÄ¿£ºÁ½¸öÊı×éµÄ½»¼¯
+    ¸ø¶¨Á½¸öÊı×é£¬±àĞ´Ò»¸öº¯ÊıÀ´¼ÆËãËüÃÇµÄ½»¼¯¡£
+    Ê¾Àı 1:
+        ÊäÈë: nums1 = [1,2,2,1], nums2 = [2,2]
+        Êä³ö: [2]
+    Ê¾Àı 2:
+        ÊäÈë: nums1 = [4,9,5], nums2 = [9,4,9,8,4]
+        Êä³ö: [9,4]
+    ËµÃ÷:
+        Êä³ö½á¹ûÖĞµÄÃ¿¸öÔªËØÒ»¶¨ÊÇÎ¨Ò»µÄ¡£
+	    ÎÒÃÇ¿ÉÒÔ²»¿¼ÂÇÊä³ö½á¹ûµÄË³Ğò¡£
 */
 
 /*
-æ€è·¯ï¼š
-
- */
-
+¾ßÌåË¼Â·£º
+    ¼¯ºÏµÄË¼Ïë
+*/
+// ÓÃ¼¯ºÏ
 vector<int> intersection(vector<int>& nums1, vector<int>& nums2) {
     vector<int> vec;
-    set<int> s;
     if(nums1.empty() || nums2.empty()){
         return vec;
     }   
-    set<int> sn;
-    if(nums1.size() > nums2.size())
-    {
-        for(auto i : nums2)
-            sn.insert(i);
-    }     
-    else
-    {
-        for(auto i : nums1)
-            sn.insert(i);
-    }
-    for(auto i : sn){
-        int low = 0;
-        int high = nums2.size() - 1;
-        while(low <= high){
-            int mid = low + (high - low)/2;
-            if(nums2[mid] == i){
-                s.insert(i);
-                break;
-            }
-            else if(i > nums2[mid]){
-                low = mid + 1;
-            }
-            else{
-                high = mid - 1;
-            }
+    set<int> sn1(nums1.begin(), nums1.end());
+    set<int> sn2(nums2.begin(), nums2.end());
+    for(auto i : sn1){
+        if(sn2.count(i)){
+            vec.push_back(i);
+            sn2.erase(i);
         }
     }
+    return vec;
+}
+// ÀûÓÃsetµÄ½»¼¯º¯Êı
+vector<int> intersection2(vector<int>& nums1, vector<int>& nums2) {
+    vector<int> vec;
+  
+    set<int> sn1(nums1.begin(), nums1.end());
+    set<int> sn2(nums2.begin(), nums2.end());
+    set<int> s;
+    set_intersection(sn1.begin(), sn1.end(), sn2.begin(), sn2.end(),inserter(s, s.begin()));
     for(auto i : s){
         vec.push_back(i);
     }
-    // vec = 
     return vec;
 }
 int main(){
     vector<int> vec1{4, 9, 5};
     vector<int> vec2{9,4,9,8,4};
-    vector<int> vec = intersection(vec1, vec2);
+    vector<int> vec = intersection2(vec1, vec2);
         // cout<<"location :"<< x<<endl;
     for(auto i : vec)
     {
