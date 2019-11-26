@@ -29,6 +29,9 @@ public:
         {
             minS.push(x);
         }
+        else{
+            minS.push(minS.top());
+        }
     }
     
     void pop() {
