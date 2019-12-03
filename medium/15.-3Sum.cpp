@@ -15,28 +15,54 @@ LeetCode-15 题目：三数之和
 
 /*
 思路：
-
+    先排序 固定一个数 让两个指针移动
  */
 vector<vector<int>> threeSum(vector<int>& nums) {
     vector<vector<int>> vec;
-    int i, j;
-    int count = 0;
-    for(i = 0;i<nums.size(); i++){
-        for(j = 0; j < nums.size(); j++){
-            for(int k = 0; k < nums.size(); k++){
-                if(nums[i] + nums[j] + nums[k] == 0 && (i != j != k)){
-                    vec[count].push_back(i);
-                    vec[count].push_back(j);
-                    vec[count].push_back(k);
-                    count++;
-                }
+    if(nums.size() < 3){
+        return vec;
+    }
+    int size = nums.size() - 1;
+    //先排序
+    sort(nums.begin(), nums.end());
+    for(int i = 0; i <= size; i++){
+        // nums[i] 大于0 那么nums[i]后面的数都大于0 不存在三个数相加为0
+        if(nums[i] > 0){
+            break;
+        }
+        // 判断i是否重复 i重复 直接跳过
+        if(i > 0 && nums[i] == nums[i-1]){
+            continue;
+        }
+        // 左下标 是i的下一个数
+        int L = i + 1;
+        // 右下标 是最后一个数
+        int R = size;
+        while(L < R){
+            int sum = nums[i] + nums[L] + nums[R];
+            if(sum == 0){
+                // 等于0 添加到数组中
+                vector<int> temp{nums[i], nums[R], nums[L]};
+                vec.push_back(temp);
+                //去掉跟nums[L]和nums[R]重复的元素
+                while(L < R && nums[L+1] == nums[L]){L++;}
+                while(L < R && nums[R] == nums[R - 1]){R--;}
+                // 继续寻找跟nums[i]三数之和相加为0的两个数
+                L++;
+                R--;
             }
-
+            else if(sum > 0){
+                R--;
+            }
+            else if(sum < 0){
+                L++;
+            }
         }
     }
     return vec;
-
 }
+
+  
 int main(){
 
     system("pause");
