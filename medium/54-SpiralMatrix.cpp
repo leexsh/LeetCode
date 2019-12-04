@@ -91,51 +91,24 @@ vector<int> spiralOrder(vector<vector<int>>& matrix){
         for(int i = b; i <= d; i++){
             vec.push_back(matrix[a][i]);
         }
-        if(++a > c) break;
+        if(++a > c) break;//不能越界
         for(int i = a; i <= c; i++){
             vec.push_back(matrix[i][d]);
         }
-        if(--d < b) break;
+        if(--d < b) break;//不能越界
         for(int i = d; i >= b; i--){
             vec.push_back(matrix[c][i]);
         }
-        if(--c < a){break;}
+        if(--c < a){break;}//不能越界
         for(int i = c; i >= a; i--){
             vec.push_back(matrix[i][b]);
         }
-        if(++b > d){ break;}
+        if(++b > d){ break;}//不能越界
     }
     return vec;
 }
-vector<vector<int>> generateMatrix(int n) {
-    vector<vector<int>> matrix(n,{(n, 0)});
-    int a = 0;
-    int b = 0;
-    int c = matrix.size() - 1;
-    int d = matrix[0].size() - 1;
-    int count = 1;
-    while(1){
-        for(int i = b; i <= d; i++){
-            matrix[a][i] = count++;
-        }
-        if(++a > c) break;
-        for(int i = a; i <= c; i++){
-            matrix[a][i] = count++;
-        }
-        if(--d < b) break;
-        for(int i = d; i >= b; i--){
-            matrix[a][i] = count++;
-        }
-        if(--c < a){break;}
-        for(int i = c; i >= a; i--){
-            matrix[a][i] = count++;
-        }
-        if(++b > d){ break;}
-    }
-    return matrix;
-}
+
 int main(){
-    generateMatrix(3);
     system("pause");
     return 0;
 }
