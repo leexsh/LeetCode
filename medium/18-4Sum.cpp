@@ -24,9 +24,9 @@ vector<vector<int>> fourSum(vector<int>& nums, int target) {
     vector<vector<int>> vec;
     int size = nums.size() - 1;
     // 排个序
-    sort(vec.begin(), vec.end());
+    sort(nums.begin(), nums.end());
     //最外层循环 先选一个数
-    for(int i = 0; i <= size - 3; i++){
+    for(int i = 0;i <= size - 3; i++){
         // 去掉重复的数
         if(i > 0 && nums[i - 1] == nums[i]){
             continue;
@@ -34,30 +34,36 @@ vector<vector<int>> fourSum(vector<int>& nums, int target) {
         //下面跟三个数之和差不多
         for(int j = i + 1; j <= size - 2; j++){
             // 去掉跟nums[j]重复的
-            if(j > i + 1 && nums[j - 1] == nums[j]){
+            if(j > i + 1 && nums[j- 1] == nums[j]){
                 continue;
             }
             int L = j + 1;
             int R = size;
             while(L < R){
-                int sum = nums[i] + nums[j] + nums[R] + nums[L];
+                int sum = nums[i] + nums[j] + nums[L] + nums[R];
                 // 两数相等
-                if(sum == target){
-                    vec.push_back({nums[i], nums[j], nums[L], nums[R]});
-                    while(L < R && nums[L + 1] == nums[L]){L++;}
-                    while(L < R&& nums[R-1] == nums[R]){R--;}
-                    R--;
+                if((sum - target) == 0){
+                    vector<int> temp{nums[i], nums[j], nums[L], nums[R]};
+                    vec.push_back(temp);
+                    //去掉跟nums[R]和nums[L]重复的数
+                    while(L < R && nums[L] == nums[L+1]){L++;}
+                    while(L < R && nums[R] == nums[R-1]){R--;}
                     L++;
-                }else if(sum > target){R--;}
-                else if(sum < target){L++;}
+                    R--;
+                }
+                else if((sum - target) > 0){
+                    R--;
+                }
+                else if((sum - target) < 0){
+                    L++;
+                }
             }
         }
     }
     return vec;
-    
-    
-
 }
+
+   
 int main(){
     vector<int> v{1,0,-1,0,2,-2};
     vector<vector<int>> vec;
