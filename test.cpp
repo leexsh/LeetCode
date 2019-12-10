@@ -14,37 +14,33 @@ struct ListNode {
     ListNode *next;
     ListNode(int x) : val(x), next(NULL) {}
 };
-ListNode* deleteDuplicates(ListNode* head) {
-    if(head == NULL){
-        return NULL;
-    }
+ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
     ListNode *pre = new ListNode(-1);
-    pre->next = head;
     ListNode *cur = pre;
-    while(head){
-        if(head->next && head->val != head->next->val){
-            cur = head;
-            head = head->next;
+    int sum = 0;
+    int carry = 0;
+    while(l1 || l2){
+        int x = l1 ? l1->val : 0;
+        int y = l2 ? l2->val : 0;
+        sum = x + y + carry;
+        carry = sum / 10;
+        sum = sum % 10;
+        cur->next = new ListNode(sum);
+        cur = cur->next;
+        if(l1){
+            l1 = l1->next;
         }
-        else
-        {
-            while(head->next && head->val == head->next->val){
-                head = head->next;
-            }
-            cur->next = head->next;
-            head = cur->next;
+        if(l2){
+            l2 = l2->next;
         }
+    }
+    if(carry){
+        cur->next = new ListNode(carry);
     }
     return pre->next;
 }
-void test(){
-    ListNode *p = new ListNode(1);
-    p->next = new ListNode(2);
-    p->next->next = new ListNode(1);
-    deleteDuplicates(p);
-}
 int main(){
-    test();
+    // test();
     system("pause");
     return 0;
 }
