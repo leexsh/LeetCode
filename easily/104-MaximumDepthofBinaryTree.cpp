@@ -17,13 +17,17 @@ LeetCode-104 题目：二叉树的最大深度
 */
 
 //  * Definition for a binary tree node.
-// 递归
 struct TreeNode {
     int val;
     TreeNode *left;
     TreeNode *right;
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
  };
+
+/*
+思路：
+    
+ */
 
 // 二叉树的深度遍历
 int maxDepth(TreeNode* root) {
@@ -73,16 +77,13 @@ int maxDeep(TreeNode *root){
     }
     return deep;
 }
-/*
-思路：
-    
- */
- int maxDepth(TreeNode* root) {
-     if(root == NULL){
-         return 0;
-     }
-     return max(maxDepth(root->left), maxDepth(root->right)) + 1;
- }
+// 递归
+int maxDepth(TreeNode* root) {
+    if(root == NULL){
+        return 0;
+    }
+    return max(maxDepth(root->left), maxDepth(root->right)) + 1;
+}
 
 int main(){
 
