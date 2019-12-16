@@ -96,7 +96,7 @@ vector<int> searchRange2(vector<int>& nums, int target) {
     if(start == finish){
         return {-1,-1};
     }
-    // 返回
+    // 返回 
     return {start - nums.begin(), finish - 1 - nums.begin()};
 }
 

@@ -36,7 +36,6 @@ vector<int> searchRange(vector<int>& nums, int target) {
     return vec;
 }
 int main(){
-    // test();
     system("pause");
     return 0;
 }
