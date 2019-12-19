@@ -27,6 +27,7 @@ LeetCode-200 题目：岛屿的数量
     如果一个坐标是1 就把跟他相连的1 全部改成2 
     就看看改几次  就是几个岛
  */
+// 
 int numIslands(vector<vector<char>>& grid) {
     if(grid.empty()){
         return 0;
@@ -56,6 +57,34 @@ void infect(vector<vector<char>> &nums, int i, int j, int L, int W){
     infect(nums, i + 1, j , L, W);
     infect(nums, i, j - 1, L, W);
     infect(nums, i, j + 1, L, W);
+}
+
+// 广度优先遍历 跟上面差不多
+void dfs(vector<vector<char>>& grid, int i, int j){
+    if(grid.empty()){
+        return;
+    }
+    grid[i][j] = '0';
+    if(i - 1 >= 0 && grid[i-1][j] == '1'){dfs(grid, i - 1, j);}
+    if(j - 1 >= 0 && grid[i][j-1] == '1'){dfs(grid, i, j - 1);}
+    if(i + 1 < grid.size() && grid[i+1][j] == '1'){dfs(grid, i + 1, j);}
+    if(j + 1 <grid[0].size() && grid[i][j+1] == '1'){dfs(grid, i, j + 1);}
+}
+int numIslands(vector<vector<char>>& grid) {
+    if(grid.empty()){
+        return 0;
+    }   
+    int res =  0;
+    for(int i = 0; i < grid.size(); ++i){
+        for(int j = 0; j < grid[0].size(); ++j){
+            if(grid[i][j] == '1'){
+                // 感染的函数
+                dfs(grid,i, j);
+                res++;
+            }
+        }
+    }
+    return res;
 }
 int main(){
 
