@@ -29,7 +29,7 @@ int lengthOfLongestSubstring(string s) {
     int n = s.size();
     set<char> se;
     int res = 0;
-    while (/* condition */i < n && j < n)
+    while (i < n && j < n)
     {
         /* code */
         if(!se.count(s[j])){
