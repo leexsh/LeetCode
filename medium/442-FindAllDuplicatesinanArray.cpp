@@ -50,12 +50,12 @@ vector<int> findDuplicates2(vector<int>& nums) {
             }
             int temp = nums[nums[i] - 1];
             nums[nums[i] - 1] = nums[i];
-            nums[i] = temp;
-            
+            nums[i] = temp; 
         }
     }
     return vec;
 }
+
 int main(){
     vector<int> vec{4,3,2,7,8,2,3,1};
     vector<int> vec1 = findDuplicates2(vec);
