@@ -46,6 +46,7 @@ public:
     }
     
     /** Get the top element. */
+    // 栈顶
     int top() {
         while(q1.size() > 1){
             q2.push(q1.front());
@@ -62,6 +63,7 @@ public:
     }
     
     /** Returns whether the stack is empty. */
+    // 栈空
     bool empty() {
         if(q1.empty() && q2.empty()){
             return true;
