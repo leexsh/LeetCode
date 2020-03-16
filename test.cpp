@@ -14,27 +14,28 @@ struct ListNode {
     ListNode *next;
     ListNode(int x) : val(x), next(NULL) {}
 };
-vector<int> searchRange(vector<int>& nums, int target) {
-    vector<int> vec(2,-1);
-    int i;
-    for(i = 0; i < nums.size(); i++){
-        if(nums[i] == target){
-            vec[0] = i;
-            break;
+class Solution {
+public:
+    string compressString(string S) {
+        string str = "";
+        for(int i = 0; i < S.size(); i++)
+        {
+            int cnt = 0;
+            int j = i;
+            while(S[i] == S[j])
+            {
+                cnt++;
+                j++;
+            }
+            str += S[i];
+            str += to_string(cnt);
+            i = j - 1;
         }
+        return str.size() > S.size() ? S : str;
     }
-    if(i == nums.size()){
-        vec[0] = -1;
-    }
-    int j;
-    for(j = nums.size() - 1; j >= i; j--){
-        if(nums[j] == target){
-            vec[1] = j;
-            break;
-        }
-    }
-    return vec;
-}
+};
+// hash_map
+
 int main(){
     system("pause");
     return 0;
