@@ -32,7 +32,7 @@ vector<int> twoSum(vector<int>& nums, int target) {
 	return vec;
 }
 //利用stl中的map
-vector<int> twoSum(vector<int>& nums, int target) {
+vector<int> twoSum1(vector<int>& nums, int target) {
 	unordered_map<int, int> m;
 	vector<int> vec;
 	int i;
