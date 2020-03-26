@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CMakeWorkspace" PROJECT_DIR="$PROJECT_DIR$" />
+  <component name="CidrRootsConfiguration">
+    <sourceRoots>
+      <file path="$PROJECT_DIR$/Daily question" />
+      <file path="$PROJECT_DIR$/easily" />
+      <file path="$PROJECT_DIR$/hard" />
+      <file path="$PROJECT_DIR$/medium" />
+    </sourceRoots>
+  </component>
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />
+  </component>
+  <component name="ProjectPlainTextFileTypeManager">
+    <file url="file://$PROJECT_DIR$/demo.cpp" />
   </component>
 </project>

@@ -52,12 +52,12 @@ CMAKE_BINARY_DIR = D:\Code\LeetCode\cmake-build-debug
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/twoSum.dir/all
+all: CMakeFiles/in.dir/all
 
 .PHONY : all
 
 # The main recursive "clean" target.
-clean: CMakeFiles/twoSum.dir/clean
+clean: CMakeFiles/in.dir/clean
 
 .PHONY : clean
 
@@ -67,31 +67,31 @@ preinstall:
 .PHONY : preinstall
 
 #=============================================================================
-# Target rules for target CMakeFiles/twoSum.dir
+# Target rules for target CMakeFiles/in.dir
 
 # All Build rule for target.
-CMakeFiles/twoSum.dir/all:
-	$(MAKE) -f CMakeFiles\twoSum.dir\build.make CMakeFiles/twoSum.dir/depend
-	$(MAKE) -f CMakeFiles\twoSum.dir\build.make CMakeFiles/twoSum.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Code\LeetCode\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target twoSum"
-.PHONY : CMakeFiles/twoSum.dir/all
+CMakeFiles/in.dir/all:
+	$(MAKE) -f CMakeFiles\in.dir\build.make CMakeFiles/in.dir/depend
+	$(MAKE) -f CMakeFiles\in.dir\build.make CMakeFiles/in.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Code\LeetCode\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target in"
+.PHONY : CMakeFiles/in.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/twoSum.dir/rule: cmake_check_build_system
+CMakeFiles/in.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\Code\LeetCode\cmake-build-debug\CMakeFiles 2
-	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/twoSum.dir/all
+	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/in.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\Code\LeetCode\cmake-build-debug\CMakeFiles 0
-.PHONY : CMakeFiles/twoSum.dir/rule
+.PHONY : CMakeFiles/in.dir/rule
 
 # Convenience name for target.
-twoSum: CMakeFiles/twoSum.dir/rule
+in: CMakeFiles/in.dir/rule
 
-.PHONY : twoSum
+.PHONY : in
 
 # clean rule for target.
-CMakeFiles/twoSum.dir/clean:
-	$(MAKE) -f CMakeFiles\twoSum.dir\build.make CMakeFiles/twoSum.dir/clean
-.PHONY : CMakeFiles/twoSum.dir/clean
+CMakeFiles/in.dir/clean:
+	$(MAKE) -f CMakeFiles\in.dir\build.make CMakeFiles/in.dir/clean
+.PHONY : CMakeFiles/in.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

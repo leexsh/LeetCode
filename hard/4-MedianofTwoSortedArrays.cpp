@@ -39,16 +39,20 @@ public:
             vec.push_back(nums1[i++]);
         }
         while(j < n2){
-            vec.push_back(nums1[j++]);
+            vec.push_back(nums2[j++]);
         }
+        int size = vec.size();
         int mid = vec.size() / 2;
-        return vec.size() % 2 == 0 ? (vec[mid - 1] + vec[mid]) / 2 : vec[mid];
+        return size % 2 == 0 ? (vec[mid - 1] + vec[mid]) / 2.0 : vec[mid];
     }
 };
 
 int main() {
-
-    cout<<"aa"<<endl;
+    vector<int> v1{1,2};
+    vector<int> v2{3,4};
+    Solution s;
+    double d = s.findMedianSortedArrays(v1,v2);
+    cout<<d<<" aa"<<endl;
 
     return 0;
 }

@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/Code/LeetCode/hard/4-MedianofTwoSortedArrays.cpp
+bits/stdc++.h
+D:/Code/LeetCode/hard/bits/stdc++.h
+

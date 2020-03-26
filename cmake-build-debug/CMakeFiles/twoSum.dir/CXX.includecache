@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/Code/LeetCode/easily/001-twoSum.cpp
+iostream
+-
+vector
+-
+bits/stdc++.h
+D:/Code/LeetCode/easily/bits/stdc++.h
+

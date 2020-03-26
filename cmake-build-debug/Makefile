@@ -110,44 +110,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named twoSum
+# Target rules for targets named in
 
 # Build rule for target.
-twoSum: cmake_check_build_system
-	$(MAKE) -f CMakeFiles\Makefile2 twoSum
-.PHONY : twoSum
+in: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 in
+.PHONY : in
 
 # fast build rule for target.
-twoSum/fast:
-	$(MAKE) -f CMakeFiles\twoSum.dir\build.make CMakeFiles/twoSum.dir/build
-.PHONY : twoSum/fast
+in/fast:
+	$(MAKE) -f CMakeFiles\in.dir\build.make CMakeFiles/in.dir/build
+.PHONY : in/fast
 
-easily/001-twoSum.obj: easily/001-twoSum.cpp.obj
+medium/5-LongestPalindromicSubstring.obj: medium/5-LongestPalindromicSubstring.cpp.obj
 
-.PHONY : easily/001-twoSum.obj
+.PHONY : medium/5-LongestPalindromicSubstring.obj
 
 # target to build an object file
-easily/001-twoSum.cpp.obj:
-	$(MAKE) -f CMakeFiles\twoSum.dir\build.make CMakeFiles/twoSum.dir/easily/001-twoSum.cpp.obj
-.PHONY : easily/001-twoSum.cpp.obj
+medium/5-LongestPalindromicSubstring.cpp.obj:
+	$(MAKE) -f CMakeFiles\in.dir\build.make CMakeFiles/in.dir/medium/5-LongestPalindromicSubstring.cpp.obj
+.PHONY : medium/5-LongestPalindromicSubstring.cpp.obj
 
-easily/001-twoSum.i: easily/001-twoSum.cpp.i
+medium/5-LongestPalindromicSubstring.i: medium/5-LongestPalindromicSubstring.cpp.i
 
-.PHONY : easily/001-twoSum.i
+.PHONY : medium/5-LongestPalindromicSubstring.i
 
 # target to preprocess a source file
-easily/001-twoSum.cpp.i:
-	$(MAKE) -f CMakeFiles\twoSum.dir\build.make CMakeFiles/twoSum.dir/easily/001-twoSum.cpp.i
-.PHONY : easily/001-twoSum.cpp.i
+medium/5-LongestPalindromicSubstring.cpp.i:
+	$(MAKE) -f CMakeFiles\in.dir\build.make CMakeFiles/in.dir/medium/5-LongestPalindromicSubstring.cpp.i
+.PHONY : medium/5-LongestPalindromicSubstring.cpp.i
 
-easily/001-twoSum.s: easily/001-twoSum.cpp.s
+medium/5-LongestPalindromicSubstring.s: medium/5-LongestPalindromicSubstring.cpp.s
 
-.PHONY : easily/001-twoSum.s
+.PHONY : medium/5-LongestPalindromicSubstring.s
 
 # target to generate assembly for a file
-easily/001-twoSum.cpp.s:
-	$(MAKE) -f CMakeFiles\twoSum.dir\build.make CMakeFiles/twoSum.dir/easily/001-twoSum.cpp.s
-.PHONY : easily/001-twoSum.cpp.s
+medium/5-LongestPalindromicSubstring.cpp.s:
+	$(MAKE) -f CMakeFiles\in.dir\build.make CMakeFiles/in.dir/medium/5-LongestPalindromicSubstring.cpp.s
+.PHONY : medium/5-LongestPalindromicSubstring.cpp.s
 
 # Help Target
 help:
@@ -155,12 +155,12 @@ help:
 	@echo ... all (the default if no target is provided)
 	@echo ... clean
 	@echo ... depend
-	@echo ... twoSum
+	@echo ... in
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... easily/001-twoSum.obj
-	@echo ... easily/001-twoSum.i
-	@echo ... easily/001-twoSum.s
+	@echo ... medium/5-LongestPalindromicSubstring.obj
+	@echo ... medium/5-LongestPalindromicSubstring.i
+	@echo ... medium/5-LongestPalindromicSubstring.s
 .PHONY : help
 
 

@@ -3,4 +3,5 @@ project(LeetCode1)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(twoSum ./easily/001-twoSum)
+add_executable(in ./medium/5-LongestPalindromicSubstring.cpp)
+#add_executable(in main.c)

@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/Code/LeetCode/medium/5-LongestPalindromicSubstring.cpp
+bits/stdc++.h
+D:/Code/LeetCode/medium/bits/stdc++.h
+
