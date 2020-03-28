@@ -1,16 +1,16 @@
 #include "bits/stdc++.h"
-using namespace std;
-/* 
-LeetCode- 题目：
-
-*/
-
-/*
-思路：
+ using namespace std;
+ /*
+ LeetCode- 题目：
 
  */
-int main(){
 
-    system("pause");
-    return 0;
-}
+ /*
+ 思路：
+
+  */
+ int main(){
+
+     system("pause");
+     return 0;
+ }

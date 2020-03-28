@@ -59,6 +59,31 @@ void calculation(vector<vector<int>>& matrix, int a, int b, int c, int d){
         matrix[a + i][d] = temp;
     }
 }
+
+
+// 转置
+void rotate1(vector<vector<int>>& matrix) {
+    for(int i = 0; i < matrix.size(); i++){
+        for(int j = i; j < matrix[i].size(); j++){
+            int temp = matrix[i][j];
+            matrix[i][j] = matrix[j][i];
+            matrix[j][i] = temp;
+        }
+    }
+    for(auto i : matrix){
+        for(auto j : i){
+            cout<<j<< " ";
+        }
+        cout<<endl;
+    }
+    for(int i = 0; i < matrix.size(); i++){
+        for(int j = 0; j < matrix[i].size() / 2; j++){
+            int temp = matrix[i][j];
+            matrix[i][j] = matrix[i][matrix[i].size() - 1- j ];
+            matrix[i][matrix[i].size() - j - 1] = temp;
+        }
+    }
+}
 int main(){
 
     system("pause");
