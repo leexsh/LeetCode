@@ -100,7 +100,40 @@ vector<int> searchRange2(vector<int>& nums, int target) {
     return {start - nums.begin(), finish - 1 - nums.begin()};
 }
 
+class Solution {
+public:
+    vector<int> searchRange(vector<int>& nums, int target) {
+        if(nums.empty()){
+            return vector<int>{-1,-1};
+        }
+        int left = 0;
+        int right = nums.size() - 1;
+        int mid;
+        while(left < right)
+        {
+            mid = left + (right - left) / 2;
+            if(nums[mid] > target){
+                right = mid - 1;
+            }
+            else if(nums[mid] < target)
+            {
+                left = mid + 1;
+            } else{
+                if(nums[right] > nums[mid]){
+                    right--;
+                }
+                if(nums[left ] < nums[mid]){
+                    left++;
+                }
+                if(nums[left] == target && nums[right] == target){
+                    return vector<int>{left, right};
+                }
 
+            }
+        }
+        return {-1,-1};
+    }
+};
 int main(){
     vector<int> vec{5,7,7,8,8,10};
     vector<int> v =  searchRange2(vec, 8);

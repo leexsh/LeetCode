@@ -122,32 +122,32 @@ in/fast:
 	$(MAKE) -f CMakeFiles\in.dir\build.make CMakeFiles/in.dir/build
 .PHONY : in/fast
 
-hard/23-MergekSortedLists.obj: hard/23-MergekSortedLists.cpp.obj
+easily/28-ImplementstrStr.obj: easily/28-ImplementstrStr.cpp.obj
 
-.PHONY : hard/23-MergekSortedLists.obj
+.PHONY : easily/28-ImplementstrStr.obj
 
 # target to build an object file
-hard/23-MergekSortedLists.cpp.obj:
-	$(MAKE) -f CMakeFiles\in.dir\build.make CMakeFiles/in.dir/hard/23-MergekSortedLists.cpp.obj
-.PHONY : hard/23-MergekSortedLists.cpp.obj
+easily/28-ImplementstrStr.cpp.obj:
+	$(MAKE) -f CMakeFiles\in.dir\build.make CMakeFiles/in.dir/easily/28-ImplementstrStr.cpp.obj
+.PHONY : easily/28-ImplementstrStr.cpp.obj
 
-hard/23-MergekSortedLists.i: hard/23-MergekSortedLists.cpp.i
+easily/28-ImplementstrStr.i: easily/28-ImplementstrStr.cpp.i
 
-.PHONY : hard/23-MergekSortedLists.i
+.PHONY : easily/28-ImplementstrStr.i
 
 # target to preprocess a source file
-hard/23-MergekSortedLists.cpp.i:
-	$(MAKE) -f CMakeFiles\in.dir\build.make CMakeFiles/in.dir/hard/23-MergekSortedLists.cpp.i
-.PHONY : hard/23-MergekSortedLists.cpp.i
+easily/28-ImplementstrStr.cpp.i:
+	$(MAKE) -f CMakeFiles\in.dir\build.make CMakeFiles/in.dir/easily/28-ImplementstrStr.cpp.i
+.PHONY : easily/28-ImplementstrStr.cpp.i
 
-hard/23-MergekSortedLists.s: hard/23-MergekSortedLists.cpp.s
+easily/28-ImplementstrStr.s: easily/28-ImplementstrStr.cpp.s
 
-.PHONY : hard/23-MergekSortedLists.s
+.PHONY : easily/28-ImplementstrStr.s
 
 # target to generate assembly for a file
-hard/23-MergekSortedLists.cpp.s:
-	$(MAKE) -f CMakeFiles\in.dir\build.make CMakeFiles/in.dir/hard/23-MergekSortedLists.cpp.s
-.PHONY : hard/23-MergekSortedLists.cpp.s
+easily/28-ImplementstrStr.cpp.s:
+	$(MAKE) -f CMakeFiles\in.dir\build.make CMakeFiles/in.dir/easily/28-ImplementstrStr.cpp.s
+.PHONY : easily/28-ImplementstrStr.cpp.s
 
 # Help Target
 help:
@@ -158,9 +158,9 @@ help:
 	@echo ... in
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... hard/23-MergekSortedLists.obj
-	@echo ... hard/23-MergekSortedLists.i
-	@echo ... hard/23-MergekSortedLists.s
+	@echo ... easily/28-ImplementstrStr.obj
+	@echo ... easily/28-ImplementstrStr.i
+	@echo ... easily/28-ImplementstrStr.s
 .PHONY : help
 
 

@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/in.dir/hard/23-MergekSortedLists.cpp.obj"
+  "CMakeFiles/in.dir/easily/28-ImplementstrStr.cpp.obj"
   "in.exe"
   "in.exe.manifest"
   "in.pdb"
