@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "D:/Code/LeetCode/easily/28-ImplementstrStr.cpp" "D:/Code/LeetCode/cmake-build-debug/CMakeFiles/in.dir/easily/28-ImplementstrStr.cpp.obj"
+  "D:/Code/LeetCode/easily/101-SymmetricTree.cpp" "D:/Code/LeetCode/cmake-build-debug/CMakeFiles/in.dir/easily/101-SymmetricTree.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

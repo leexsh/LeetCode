@@ -6,7 +6,11 @@
 
 #IncludeRegexTransform: 
 
-D:/Code/LeetCode/easily/28-ImplementstrStr.cpp
-bits/stdc++.h
-D:/Code/LeetCode/easily/bits/stdc++.h
+D:/Code/LeetCode/easily/101-SymmetricTree.cpp
+iostream
+-
+stack
+-
+deque
+-
 

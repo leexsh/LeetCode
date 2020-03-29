@@ -56,27 +56,27 @@ include CMakeFiles/in.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/in.dir/flags.make
 
-CMakeFiles/in.dir/easily/28-ImplementstrStr.cpp.obj: CMakeFiles/in.dir/flags.make
-CMakeFiles/in.dir/easily/28-ImplementstrStr.cpp.obj: ../easily/28-ImplementstrStr.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Code\LeetCode\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/in.dir/easily/28-ImplementstrStr.cpp.obj"
-	D:\software\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\in.dir\easily\28-ImplementstrStr.cpp.obj -c D:\Code\LeetCode\easily\28-ImplementstrStr.cpp
+CMakeFiles/in.dir/easily/101-SymmetricTree.cpp.obj: CMakeFiles/in.dir/flags.make
+CMakeFiles/in.dir/easily/101-SymmetricTree.cpp.obj: ../easily/101-SymmetricTree.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Code\LeetCode\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/in.dir/easily/101-SymmetricTree.cpp.obj"
+	D:\software\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\in.dir\easily\101-SymmetricTree.cpp.obj -c D:\Code\LeetCode\easily\101-SymmetricTree.cpp
 
-CMakeFiles/in.dir/easily/28-ImplementstrStr.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/in.dir/easily/28-ImplementstrStr.cpp.i"
-	D:\software\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Code\LeetCode\easily\28-ImplementstrStr.cpp > CMakeFiles\in.dir\easily\28-ImplementstrStr.cpp.i
+CMakeFiles/in.dir/easily/101-SymmetricTree.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/in.dir/easily/101-SymmetricTree.cpp.i"
+	D:\software\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Code\LeetCode\easily\101-SymmetricTree.cpp > CMakeFiles\in.dir\easily\101-SymmetricTree.cpp.i
 
-CMakeFiles/in.dir/easily/28-ImplementstrStr.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/in.dir/easily/28-ImplementstrStr.cpp.s"
-	D:\software\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Code\LeetCode\easily\28-ImplementstrStr.cpp -o CMakeFiles\in.dir\easily\28-ImplementstrStr.cpp.s
+CMakeFiles/in.dir/easily/101-SymmetricTree.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/in.dir/easily/101-SymmetricTree.cpp.s"
+	D:\software\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Code\LeetCode\easily\101-SymmetricTree.cpp -o CMakeFiles\in.dir\easily\101-SymmetricTree.cpp.s
 
 # Object files for target in
 in_OBJECTS = \
-"CMakeFiles/in.dir/easily/28-ImplementstrStr.cpp.obj"
+"CMakeFiles/in.dir/easily/101-SymmetricTree.cpp.obj"
 
 # External object files for target in
 in_EXTERNAL_OBJECTS =
 
-in.exe: CMakeFiles/in.dir/easily/28-ImplementstrStr.cpp.obj
+in.exe: CMakeFiles/in.dir/easily/101-SymmetricTree.cpp.obj
 in.exe: CMakeFiles/in.dir/build.make
 in.exe: CMakeFiles/in.dir/linklibs.rsp
 in.exe: CMakeFiles/in.dir/objects1.rsp

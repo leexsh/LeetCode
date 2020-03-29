@@ -10,4 +10,4 @@ set(CMAKE_CXX_STANDARD 11)
 
 #add_executable(in main.cpp)
 
-add_executable(in ./easily/28-ImplementstrStr.cpp)
+add_executable(in ./easily/101-SymmetricTree.cpp)

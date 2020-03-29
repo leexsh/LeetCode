@@ -122,32 +122,32 @@ in/fast:
 	$(MAKE) -f CMakeFiles\in.dir\build.make CMakeFiles/in.dir/build
 .PHONY : in/fast
 
-easily/28-ImplementstrStr.obj: easily/28-ImplementstrStr.cpp.obj
+easily/101-SymmetricTree.obj: easily/101-SymmetricTree.cpp.obj
 
-.PHONY : easily/28-ImplementstrStr.obj
+.PHONY : easily/101-SymmetricTree.obj
 
 # target to build an object file
-easily/28-ImplementstrStr.cpp.obj:
-	$(MAKE) -f CMakeFiles\in.dir\build.make CMakeFiles/in.dir/easily/28-ImplementstrStr.cpp.obj
-.PHONY : easily/28-ImplementstrStr.cpp.obj
+easily/101-SymmetricTree.cpp.obj:
+	$(MAKE) -f CMakeFiles\in.dir\build.make CMakeFiles/in.dir/easily/101-SymmetricTree.cpp.obj
+.PHONY : easily/101-SymmetricTree.cpp.obj
 
-easily/28-ImplementstrStr.i: easily/28-ImplementstrStr.cpp.i
+easily/101-SymmetricTree.i: easily/101-SymmetricTree.cpp.i
 
-.PHONY : easily/28-ImplementstrStr.i
+.PHONY : easily/101-SymmetricTree.i
 
 # target to preprocess a source file
-easily/28-ImplementstrStr.cpp.i:
-	$(MAKE) -f CMakeFiles\in.dir\build.make CMakeFiles/in.dir/easily/28-ImplementstrStr.cpp.i
-.PHONY : easily/28-ImplementstrStr.cpp.i
+easily/101-SymmetricTree.cpp.i:
+	$(MAKE) -f CMakeFiles\in.dir\build.make CMakeFiles/in.dir/easily/101-SymmetricTree.cpp.i
+.PHONY : easily/101-SymmetricTree.cpp.i
 
-easily/28-ImplementstrStr.s: easily/28-ImplementstrStr.cpp.s
+easily/101-SymmetricTree.s: easily/101-SymmetricTree.cpp.s
 
-.PHONY : easily/28-ImplementstrStr.s
+.PHONY : easily/101-SymmetricTree.s
 
 # target to generate assembly for a file
-easily/28-ImplementstrStr.cpp.s:
-	$(MAKE) -f CMakeFiles\in.dir\build.make CMakeFiles/in.dir/easily/28-ImplementstrStr.cpp.s
-.PHONY : easily/28-ImplementstrStr.cpp.s
+easily/101-SymmetricTree.cpp.s:
+	$(MAKE) -f CMakeFiles\in.dir\build.make CMakeFiles/in.dir/easily/101-SymmetricTree.cpp.s
+.PHONY : easily/101-SymmetricTree.cpp.s
 
 # Help Target
 help:
@@ -158,9 +158,9 @@ help:
 	@echo ... in
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... easily/28-ImplementstrStr.obj
-	@echo ... easily/28-ImplementstrStr.i
-	@echo ... easily/28-ImplementstrStr.s
+	@echo ... easily/101-SymmetricTree.obj
+	@echo ... easily/101-SymmetricTree.i
+	@echo ... easily/101-SymmetricTree.s
 .PHONY : help
 
 
