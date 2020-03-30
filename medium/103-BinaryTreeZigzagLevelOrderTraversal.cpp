@@ -1,6 +1,7 @@
 #include <iostream>
 #include <stack>
 #include <vector>
+#include <queue>
 using namespace std;
 //
 // Created by leexsh on 2020/3/26.
@@ -25,15 +26,36 @@ public:
         {
             return vector<vector<int>>();
         }
-        stack<TreeNode *> st;
+        queue<TreeNode *> st;
         vector<vector<int>> vec;
         st.push(root);
-        que
+        int level = 0;
         while(!st.empty())
         {
-            TreeNode *node = st.top();
-            st.pop();
+            int size = st.size();
+//            用deque可以提高速度 不然也可以用vector
+            deque<int> temp;
+            while(size--)
+            {
+                TreeNode *p = st.front();
+                st.pop();
+                if(level % 2 == 0){
+                    temp.push_back(p->val);
+                } else{
+                    temp.push_front(p->val);
+                }
+                if(p->left){
+                    st.push(p->left);
+                }
+                if(p->right){
+                    st.push(p->right);
+                }
+
+            }
+            level++;
+            vec.push_back(vector<int>(temp.begin(), temp.end()));
         }
+        return vec;
     }
 };
 
