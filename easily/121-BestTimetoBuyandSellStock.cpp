@@ -23,14 +23,14 @@ LeetCode-121 题目：买股票的最佳时机一
 int maxProfit(vector<int>& prices) {
     if(prices.size() == 0)
         return 0;
-    int max, min = prices[0];
+    int max = INT_MIN;
+    int min = prices[0];
     for(int i = 0; i < prices.size(); ++i){
+        int cur = prices[i] - min;
         if(prices[i] < min){
             min = prices[i];
         }
-        if(prices[i] - min > max){
-            max = prices[i] - min;
-        }
+        max = max(max,   cur);
     }
     return max;
 }
