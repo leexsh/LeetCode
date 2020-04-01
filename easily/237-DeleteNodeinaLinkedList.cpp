@@ -25,15 +25,13 @@ struct ListNode {
     ListNode *next;
     ListNode(int x) : val(x), next(NULL) {}
 };
-void deleteNode(ListNode* node) {
-        //ListNode *p = node->next;
-        //node->val = p->val;
-        //node->next = p->next;
-        //delete p;
-        //p = NULL;
+class Solution {
+public:
+    void deleteNode(ListNode* node) {
         node->val = node->next->val;
         node->next = node->next->next;
     }
+};
 int main(){
     map<int, int> m;
     system("pause");

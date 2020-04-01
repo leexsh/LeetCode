@@ -18,22 +18,16 @@ public:
     }
 };
 
-class Solution {
+class Node {
 public:
-    vector<vector<int>> zigzagLevelOrder(TreeNode* root) {
-        if(root == nullptr)
-        {
-            return vector<vector<int>>();
-        }
-        stack<TreeNode *> st;
-        vector<vector<int>> vec;
-        st.push(root);
-        que
-        while(!st.empty())
-        {
-            TreeNode *node = st.top();
-            st.pop();
-        }
+    int val;
+    Node* next;
+    Node* random;
+
+    Node(int _val) {
+        val = _val;
+        next = NULL;
+        random = NULL;
     }
 };
 

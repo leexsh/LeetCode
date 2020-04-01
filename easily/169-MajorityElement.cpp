@@ -17,6 +17,15 @@ LeetCode 169 -题目：求众数
     见法1 法2
  */
 
+// 排序
+class Solution {
+public:
+    int majorityElement(vector<int>& nums) {
+       sort(nums.begin(), nums.end());
+       return nums[nums.size() / 2];
+    }
+};
+
 // 借助map 时间复杂度O(n)
 // int majorityElement(vector<int>& nums) {
 //     unordered_map<int, int> m;
