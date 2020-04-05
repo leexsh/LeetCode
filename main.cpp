@@ -1,6 +1,4 @@
-#include <iostream>
-#include <stack>
-#include <vector>
+#include <bits/stdc++.h>
 using namespace std;
 //
 // Created by leexsh on 2020/3/26.
@@ -31,9 +29,37 @@ public:
     }
 };
 
-int main() {
 
-    cout<<endl;
+
+
+string core(string s, int i , int j ){
+    while(s[i] == s[j] && i >= 0 && j < s.size()){
+        i--, j++;
+    }
+    return s.substr(i+1, j - i - 1);
+}
+string longestPalindrome(string s) {
+    if(s.size() <= 1)
+    {
+        return s;
+    }
+    string str;
+    for (int i = 0; i < s.size()  ; ++i) {
+        string s1 = core(s, i, i);
+        string s2 = core(s, i,i +1);
+        string ss = s1.size() > s2.size() ? s1 : s2;
+        str = str.size() > ss.size() ? str : ss;
+
+    }
+    return str;
+//    return s.substr(start, maxlen);
+}
+
+
+int main() {
+    string s = "babad";
+    string str = longestPalindrome(s);
+    cout<<str<<endl;
 
     return 0;
 }

@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/in.dir/easily/101-SymmetricTree.cpp.obj"
+  "CMakeFiles/in.dir/main.cpp.obj"
   "in.exe"
   "in.exe.manifest"
   "in.pdb"

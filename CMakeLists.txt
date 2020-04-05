@@ -8,6 +8,6 @@ set(CMAKE_CXX_STANDARD 11)
 #add_executable(in ./hard/23-MergekSortedLists.cpp)
 
 
-#add_executable(in main.cpp)
+add_executable(in main.cpp)
 
-add_executable(in ./easily/101-SymmetricTree.cpp)
+#add_executable(in ./easily/101-SymmetricTree.cpp)

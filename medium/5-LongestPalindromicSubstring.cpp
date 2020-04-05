@@ -104,6 +104,7 @@ public:
             i--;
             j++;
         }
+//        i+1 到 j - (i + 1) == i + 1 到 j - i - 1
         return s.substr(i + 1, j - i - 1);
     }
     string longestPalindrome(string s) {

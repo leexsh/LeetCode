@@ -43,8 +43,8 @@ int lengthOfLongestSubstring(string s) {
         }
         
     }
-    
 }
+
 int main(){
 
     system("pause");

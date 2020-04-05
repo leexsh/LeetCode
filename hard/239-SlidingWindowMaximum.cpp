@@ -52,6 +52,7 @@ public:
         return res;
     }
 };
+
 int main(){
 
     system("pause");

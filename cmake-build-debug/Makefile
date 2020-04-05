@@ -122,32 +122,32 @@ in/fast:
 	$(MAKE) -f CMakeFiles\in.dir\build.make CMakeFiles/in.dir/build
 .PHONY : in/fast
 
-easily/101-SymmetricTree.obj: easily/101-SymmetricTree.cpp.obj
+main.obj: main.cpp.obj
 
-.PHONY : easily/101-SymmetricTree.obj
+.PHONY : main.obj
 
 # target to build an object file
-easily/101-SymmetricTree.cpp.obj:
-	$(MAKE) -f CMakeFiles\in.dir\build.make CMakeFiles/in.dir/easily/101-SymmetricTree.cpp.obj
-.PHONY : easily/101-SymmetricTree.cpp.obj
+main.cpp.obj:
+	$(MAKE) -f CMakeFiles\in.dir\build.make CMakeFiles/in.dir/main.cpp.obj
+.PHONY : main.cpp.obj
 
-easily/101-SymmetricTree.i: easily/101-SymmetricTree.cpp.i
+main.i: main.cpp.i
 
-.PHONY : easily/101-SymmetricTree.i
+.PHONY : main.i
 
 # target to preprocess a source file
-easily/101-SymmetricTree.cpp.i:
-	$(MAKE) -f CMakeFiles\in.dir\build.make CMakeFiles/in.dir/easily/101-SymmetricTree.cpp.i
-.PHONY : easily/101-SymmetricTree.cpp.i
+main.cpp.i:
+	$(MAKE) -f CMakeFiles\in.dir\build.make CMakeFiles/in.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-easily/101-SymmetricTree.s: easily/101-SymmetricTree.cpp.s
+main.s: main.cpp.s
 
-.PHONY : easily/101-SymmetricTree.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-easily/101-SymmetricTree.cpp.s:
-	$(MAKE) -f CMakeFiles\in.dir\build.make CMakeFiles/in.dir/easily/101-SymmetricTree.cpp.s
-.PHONY : easily/101-SymmetricTree.cpp.s
+main.cpp.s:
+	$(MAKE) -f CMakeFiles\in.dir\build.make CMakeFiles/in.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -158,9 +158,9 @@ help:
 	@echo ... in
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... easily/101-SymmetricTree.obj
-	@echo ... easily/101-SymmetricTree.i
-	@echo ... easily/101-SymmetricTree.s
+	@echo ... main.obj
+	@echo ... main.i
+	@echo ... main.s
 .PHONY : help
 
 

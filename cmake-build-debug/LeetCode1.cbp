@@ -80,7 +80,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="D:/Code/LeetCode/easily/101-SymmetricTree.cpp">
+		<Unit filename="D:/Code/LeetCode/main.cpp">
 			<Option target="in"/>
 		</Unit>
 		<Unit filename="D:/Code/LeetCode/CMakeLists.txt">

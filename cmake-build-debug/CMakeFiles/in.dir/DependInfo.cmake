@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "D:/Code/LeetCode/easily/101-SymmetricTree.cpp" "D:/Code/LeetCode/cmake-build-debug/CMakeFiles/in.dir/easily/101-SymmetricTree.cpp.obj"
+  "D:/Code/LeetCode/main.cpp" "D:/Code/LeetCode/cmake-build-debug/CMakeFiles/in.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
