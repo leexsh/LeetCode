@@ -17,6 +17,8 @@ LeetCode-28 题目：实现str
 思路：
 
  */
+
+// KMP算法
 class Solution {
 public:
     int strStr(string haystack, string needle) {

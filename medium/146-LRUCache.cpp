@@ -26,66 +26,9 @@ LeetCode-146 题目：LRU缓存机制
 思路：
 
  */
-class LRUCache {
-public:
-    LRUCache(int capacity) {
-        this->size = capacity;
-    }
 
 
-    int get(int key) {
-//        找key
-        auto ite = map.find(key);
-//        没找到
-        if(ite == map.end()){
-            return -1;
-        }
-//        获取到位置
-        pair<int, int> kv = *map[key];
-//        先清除
-        cache.erase(map[key]);
-//        在加入到链表头部
-        cache.push_front(kv);
-//          更新位置
-        map[key] = cache.begin();
-//        返回value
-        return kv.second;
-    }
 
-    void put(int key, int value) {
-        auto ite = map.find(key);
-//        不存在缓存中
-        if(ite == map.end())
-        {
-//            缓存满了
-            if(cache.size() == size)
-            {
-//                pair<int,int> lastpair = cache.back();
-//                先把缓存清除了
-                map.erase(cache.back().first);
-                cache.pop_back();
-            }
-        } else
-        {
-            cache.erase(map[key]);
-        }
-        cache.push_front(make_pair(key, value));
-        map[key] = cache.begin();
-    }
-
-private:
-    int size;
-    list<pair<int, int>> cache;
-    unordered_map<int, list<pair<int,int>>::iterator> map;
-
-};
-
-/**
- * Your LRUCache object will be instantiated and called as such:
- * LRUCache* obj = new LRUCache(capacity);
- * int param_1 = obj->get(key);
- * obj->put(key,value);
- */
 int main(){
 
     system("pause");
