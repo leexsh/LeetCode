@@ -49,9 +49,6 @@ bool isValid(string s) {
                 if(i == '}' && vec.back() != '{') return false;
                 vec.pop_back();
             }
-            else{
-                return false;
-            }
         }
     }
     return vec.empty() ? true : false;

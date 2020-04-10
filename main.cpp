@@ -5,10 +5,18 @@ using namespace std;
 //
 
 
-
 int main() {
-    int a = 0, b = 1;
-    swap(a,b);
-    cout<<a<<b<<endl;
+    priority_queue<int,vector<int>,greater<int>> que;
+
+    que.push(3);
+    que.push(6);
+    que.push(2);
+    que.push(1);
+    while(!que.empty())
+    {
+        cout<<que.top();
+        que.pop();
+    }
+
     return 0;
 }
