@@ -6,6 +6,8 @@
 ### include"bits/stdc++.h"尽量不要使用 会使编译时间过长
 ## 支持vscode和clion
 # LeetCode
+# MianShiJinDian:程序员面试金典
+# algorithm:一些算法题目
 # -------------------------------------
 ## 分类：
 ### 

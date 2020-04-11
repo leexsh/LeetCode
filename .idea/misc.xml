@@ -3,10 +3,10 @@
   <component name="CMakeWorkspace" PROJECT_DIR="$PROJECT_DIR$" />
   <component name="CidrRootsConfiguration">
     <sourceRoots>
-      <file path="$PROJECT_DIR$/Daily question" />
-      <file path="$PROJECT_DIR$/easily" />
-      <file path="$PROJECT_DIR$/hard" />
-      <file path="$PROJECT_DIR$/medium" />
+      <file path="$PROJECT_DIR$/01_Daily question" />
+      <file path="$PROJECT_DIR$/05_easily" />
+      <file path="$PROJECT_DIR$/06_medium" />
+      <file path="$PROJECT_DIR$/07_hard" />
     </sourceRoots>
   </component>
   <component name="JavaScriptSettings">
