@@ -53,11 +53,13 @@ CMAKE_BINARY_DIR = D:\Code\LeetCode\cmake-build-debug
 
 # The main recursive "all" target.
 all: CMakeFiles/in.dir/all
+all: CMakeFiles/out.dir/all
 
 .PHONY : all
 
 # The main recursive "clean" target.
 clean: CMakeFiles/in.dir/clean
+clean: CMakeFiles/out.dir/clean
 
 .PHONY : clean
 
@@ -92,6 +94,33 @@ in: CMakeFiles/in.dir/rule
 CMakeFiles/in.dir/clean:
 	$(MAKE) -f CMakeFiles\in.dir\build.make CMakeFiles/in.dir/clean
 .PHONY : CMakeFiles/in.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/out.dir
+
+# All Build rule for target.
+CMakeFiles/out.dir/all:
+	$(MAKE) -f CMakeFiles\out.dir\build.make CMakeFiles/out.dir/depend
+	$(MAKE) -f CMakeFiles\out.dir\build.make CMakeFiles/out.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=D:\Code\LeetCode\cmake-build-debug\CMakeFiles --progress-num=3,4 "Built target out"
+.PHONY : CMakeFiles/out.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/out.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Code\LeetCode\cmake-build-debug\CMakeFiles 2
+	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/out.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Code\LeetCode\cmake-build-debug\CMakeFiles 0
+.PHONY : CMakeFiles/out.dir/rule
+
+# Convenience name for target.
+out: CMakeFiles/out.dir/rule
+
+.PHONY : out
+
+# clean rule for target.
+CMakeFiles/out.dir/clean:
+	$(MAKE) -f CMakeFiles\out.dir\build.make CMakeFiles/out.dir/clean
+.PHONY : CMakeFiles/out.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

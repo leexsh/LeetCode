@@ -3,7 +3,11 @@
   <component name="CMakeWorkspace" PROJECT_DIR="$PROJECT_DIR$" />
   <component name="CidrRootsConfiguration">
     <sourceRoots>
+      <file path="$PROJECT_DIR$/.vscode" />
       <file path="$PROJECT_DIR$/01_Daily question" />
+      <file path="$PROJECT_DIR$/02_Algorithm" />
+      <file path="$PROJECT_DIR$/03_MianShiJinDian" />
+      <file path="$PROJECT_DIR$/04_CodeInterview" />
       <file path="$PROJECT_DIR$/05_easily" />
       <file path="$PROJECT_DIR$/06_medium" />
       <file path="$PROJECT_DIR$/07_hard" />

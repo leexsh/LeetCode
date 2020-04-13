@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/Code/LeetCode/07_hard/124-BinaryTreeMaximumPathSum.cpp
+bits/stdc++.h
+D:/Code/LeetCode/07_hard/bits/stdc++.h
+

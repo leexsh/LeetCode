@@ -1,3 +1,4 @@
 D:/Code/LeetCode/cmake-build-debug/CMakeFiles/in.dir
+D:/Code/LeetCode/cmake-build-debug/CMakeFiles/out.dir
 D:/Code/LeetCode/cmake-build-debug/CMakeFiles/edit_cache.dir
 D:/Code/LeetCode/cmake-build-debug/CMakeFiles/rebuild_cache.dir
