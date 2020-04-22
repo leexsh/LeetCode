@@ -33,25 +33,32 @@ bool isValid(string s) {
     // 奇数的序列s肯定不满足 返回false
     if(s.size() % 2 != 0)
         return false;
-    //用容器替代栈
-    vector<char> vec;
-    // 遍历
-    for(auto i : s){
-        //左括号进容器
+//    栈
+    stack<char> st;
+    for(auto i : s)
+    {
         if(i == '(' || i == '[' || i == '{'){
-            vec.push_back(i);
-        }
-        else{
-            //右括号进行比对
-            if(!vec.empty()){
-                if(i == ')' && vec.back() != '(') return false;
-                if(i == ']' && vec.back() != '[') return false;
-                if(i == '}' && vec.back() != '{') return false;
-                vec.pop_back();
+            st.push(i);
+        } else{
+            if(st.empty()){
+                return false;
             }
+            if(i == '}' && st.top() != '{')
+            {
+                return false;
+            }
+            if(i == ']' && st.top() != '[')
+            {
+                return  false;
+            }
+            if(i == ')' && st.top() != '(')
+            {
+                return false;
+            }
+            st.pop();
         }
     }
-    return vec.empty() ? true : false;
+    return st.empty();
 }
 int main(){
     string s = "[][][]()(){}{}";
