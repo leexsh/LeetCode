@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/out.dir/07_hard/124-BinaryTreeMaximumPathSum.cpp.obj"
+  "CMakeFiles/out.dir/06_medium/61-RotateList.cpp.obj"
   "libout.dll.a"
   "out.exe"
   "out.exe.manifest"

@@ -135,32 +135,32 @@ out/fast:
 	$(MAKE) -f CMakeFiles\out.dir\build.make CMakeFiles/out.dir/build
 .PHONY : out/fast
 
-07_hard/124-BinaryTreeMaximumPathSum.obj: 07_hard/124-BinaryTreeMaximumPathSum.cpp.obj
+06_medium/61-RotateList.obj: 06_medium/61-RotateList.cpp.obj
 
-.PHONY : 07_hard/124-BinaryTreeMaximumPathSum.obj
+.PHONY : 06_medium/61-RotateList.obj
 
 # target to build an object file
-07_hard/124-BinaryTreeMaximumPathSum.cpp.obj:
-	$(MAKE) -f CMakeFiles\out.dir\build.make CMakeFiles/out.dir/07_hard/124-BinaryTreeMaximumPathSum.cpp.obj
-.PHONY : 07_hard/124-BinaryTreeMaximumPathSum.cpp.obj
+06_medium/61-RotateList.cpp.obj:
+	$(MAKE) -f CMakeFiles\out.dir\build.make CMakeFiles/out.dir/06_medium/61-RotateList.cpp.obj
+.PHONY : 06_medium/61-RotateList.cpp.obj
 
-07_hard/124-BinaryTreeMaximumPathSum.i: 07_hard/124-BinaryTreeMaximumPathSum.cpp.i
+06_medium/61-RotateList.i: 06_medium/61-RotateList.cpp.i
 
-.PHONY : 07_hard/124-BinaryTreeMaximumPathSum.i
+.PHONY : 06_medium/61-RotateList.i
 
 # target to preprocess a source file
-07_hard/124-BinaryTreeMaximumPathSum.cpp.i:
-	$(MAKE) -f CMakeFiles\out.dir\build.make CMakeFiles/out.dir/07_hard/124-BinaryTreeMaximumPathSum.cpp.i
-.PHONY : 07_hard/124-BinaryTreeMaximumPathSum.cpp.i
+06_medium/61-RotateList.cpp.i:
+	$(MAKE) -f CMakeFiles\out.dir\build.make CMakeFiles/out.dir/06_medium/61-RotateList.cpp.i
+.PHONY : 06_medium/61-RotateList.cpp.i
 
-07_hard/124-BinaryTreeMaximumPathSum.s: 07_hard/124-BinaryTreeMaximumPathSum.cpp.s
+06_medium/61-RotateList.s: 06_medium/61-RotateList.cpp.s
 
-.PHONY : 07_hard/124-BinaryTreeMaximumPathSum.s
+.PHONY : 06_medium/61-RotateList.s
 
 # target to generate assembly for a file
-07_hard/124-BinaryTreeMaximumPathSum.cpp.s:
-	$(MAKE) -f CMakeFiles\out.dir\build.make CMakeFiles/out.dir/07_hard/124-BinaryTreeMaximumPathSum.cpp.s
-.PHONY : 07_hard/124-BinaryTreeMaximumPathSum.cpp.s
+06_medium/61-RotateList.cpp.s:
+	$(MAKE) -f CMakeFiles\out.dir\build.make CMakeFiles/out.dir/06_medium/61-RotateList.cpp.s
+.PHONY : 06_medium/61-RotateList.cpp.s
 
 main.obj: main.cpp.obj
 
@@ -199,9 +199,9 @@ help:
 	@echo ... out
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... 07_hard/124-BinaryTreeMaximumPathSum.obj
-	@echo ... 07_hard/124-BinaryTreeMaximumPathSum.i
-	@echo ... 07_hard/124-BinaryTreeMaximumPathSum.s
+	@echo ... 06_medium/61-RotateList.obj
+	@echo ... 06_medium/61-RotateList.i
+	@echo ... 06_medium/61-RotateList.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

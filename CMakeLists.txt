@@ -9,5 +9,5 @@ set(CMAKE_CXX_STANDARD 11)
 
 
 add_executable(in main.cpp)
-add_executable(out ./07_hard/124-BinaryTreeMaximumPathSum.cpp)
+add_executable(out ./06_medium/61-RotateList.cpp)
 #add_executable(in ./05_easily/101-SymmetricTree.cpp)

@@ -54,6 +54,29 @@ public:
 };
 
 
+// 递归
+class Solution3 {
+public:
+    double myPow(double x, int n) {
+        long num = abs(n);
+        if(n == 1)
+        {
+            return x;
+        }
+        if(n == 0){
+            return 1;
+        }
+        double res = 1;
+        res = myPow(x, num >> 1);
+        res *= res;
+        if(num & 1)
+        {
+            res *= x;
+        }
+        return n > 0 ? res : 1/res;
+    }
+};
+
 int main() {
 
 
