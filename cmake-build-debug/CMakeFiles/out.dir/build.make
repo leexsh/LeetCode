@@ -56,27 +56,27 @@ include CMakeFiles/out.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/out.dir/flags.make
 
-CMakeFiles/out.dir/06_medium/61-RotateList.cpp.obj: CMakeFiles/out.dir/flags.make
-CMakeFiles/out.dir/06_medium/61-RotateList.cpp.obj: ../06_medium/61-RotateList.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Code\LeetCode\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/out.dir/06_medium/61-RotateList.cpp.obj"
-	D:\software\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\out.dir\06_medium\61-RotateList.cpp.obj -c D:\Code\LeetCode\06_medium\61-RotateList.cpp
+CMakeFiles/out.dir/06_medium/64-MinimumPathSum.cpp.obj: CMakeFiles/out.dir/flags.make
+CMakeFiles/out.dir/06_medium/64-MinimumPathSum.cpp.obj: ../06_medium/64-MinimumPathSum.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Code\LeetCode\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/out.dir/06_medium/64-MinimumPathSum.cpp.obj"
+	D:\software\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\out.dir\06_medium\64-MinimumPathSum.cpp.obj -c D:\Code\LeetCode\06_medium\64-MinimumPathSum.cpp
 
-CMakeFiles/out.dir/06_medium/61-RotateList.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/out.dir/06_medium/61-RotateList.cpp.i"
-	D:\software\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Code\LeetCode\06_medium\61-RotateList.cpp > CMakeFiles\out.dir\06_medium\61-RotateList.cpp.i
+CMakeFiles/out.dir/06_medium/64-MinimumPathSum.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/out.dir/06_medium/64-MinimumPathSum.cpp.i"
+	D:\software\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Code\LeetCode\06_medium\64-MinimumPathSum.cpp > CMakeFiles\out.dir\06_medium\64-MinimumPathSum.cpp.i
 
-CMakeFiles/out.dir/06_medium/61-RotateList.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/out.dir/06_medium/61-RotateList.cpp.s"
-	D:\software\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Code\LeetCode\06_medium\61-RotateList.cpp -o CMakeFiles\out.dir\06_medium\61-RotateList.cpp.s
+CMakeFiles/out.dir/06_medium/64-MinimumPathSum.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/out.dir/06_medium/64-MinimumPathSum.cpp.s"
+	D:\software\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Code\LeetCode\06_medium\64-MinimumPathSum.cpp -o CMakeFiles\out.dir\06_medium\64-MinimumPathSum.cpp.s
 
 # Object files for target out
 out_OBJECTS = \
-"CMakeFiles/out.dir/06_medium/61-RotateList.cpp.obj"
+"CMakeFiles/out.dir/06_medium/64-MinimumPathSum.cpp.obj"
 
 # External object files for target out
 out_EXTERNAL_OBJECTS =
 
-out.exe: CMakeFiles/out.dir/06_medium/61-RotateList.cpp.obj
+out.exe: CMakeFiles/out.dir/06_medium/64-MinimumPathSum.cpp.obj
 out.exe: CMakeFiles/out.dir/build.make
 out.exe: CMakeFiles/out.dir/linklibs.rsp
 out.exe: CMakeFiles/out.dir/objects1.rsp

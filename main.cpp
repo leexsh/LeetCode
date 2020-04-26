@@ -6,26 +6,34 @@ using namespace std;
 
 class Solution {
 public:
-    int lengthOfLastWord(string s) {
-        if(s.empty()){
-            return 0;
-        }
-        int len = s.size() - 1;
-        while(s[len] == ' ' && len >= 0)
+    vector<vector<int>> res;
+    vector<vector<int>> permute(vector<int>& nums) {
+        if(nums.empty())
         {
-            len--;
+            return res;
         }
-        int count = 0;
-        for (int i = len; i >= 0 ; --i) {
-            if(s[i] != ' '){
-                count++;
-            } else
-                {
-                    break;
-                }
+        sort(nums.begin(), nums.end());
+        vector<int> path;
+        dfs(nums,path);
+        return res;
+    }
+    void dfs(vector<int> &nums, vector<int> &path)
+    {
+        if(nums.size() == path.size())
+        {
+            res.push_back(path);
+            return;
         }
-        return count;
+        for (int i = 0; i < nums.size(); ++i) {
+            if(find(path.begin(), path.end(), nums[i]) == path.end())
+            {
+                path.push_back(nums[i]);
+                dfs(nums,path);
+                path.pop_back();
+            }
 
+
+        }
     }
 };
 int main() {

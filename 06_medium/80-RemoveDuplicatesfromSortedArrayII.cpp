@@ -40,7 +40,9 @@ int removeDuplicates(vector<int>& nums) {
     return slow;
 }
 int main(){
-
+    vector<int> nums;
+    int target = 0;
+    find(nums.begin(), nums.end(),target);
     system("pause");
     return 0;
 }

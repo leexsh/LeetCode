@@ -30,35 +30,33 @@ LeetCode-74 题目：搜索二维矩阵
 思路：
     二分
  */
-bool searchMatrix(vector<vector<int>>& matrix, int target) {
-    if(matrix.empty())
-        return false;
-    int heng = matrix[0].size();
-    int shu = matrix.size();
-    int end = heng * shu - 1;
-    int start = 0;
-    while(start <= end){
-        int mid = start + (end - start) / 2;
-        if(matrix[mid/heng][mid%heng] == target){
-            return true;
-        }
-        else if(matrix[mid/heng][mid%heng] < target){
-            start = mid + 1;
-        }
-        else
+class Solution {
+public:
+    bool searchMatrix(vector<vector<int>>& matrix, int target) {
+        if(matrix.empty())
         {
-            /* code */
-            end = mid - 1;
+            return false;
         }
-    
+        int m = matrix.size()-1;
+        int n = 0;
+        while (m >= 0 && n < matrix[0].size())
+        {
+            if(matrix[m][n] == target){
+                return true;
+            } else if(matrix[m][n] < target)
+            {
+                n++;
+            }
+            else
+            {
+                m--;
+            }
+        }
+        return false;
     }
-    return false;
-}
+};
 int main(){
-    // test();
-    vector<vector<int>> vec{{1,3,5,7},{10,11,16,20},{23,30,34,50}};
-    bool f = searchMatrix(vec, 3);
-    cout<<f<<endl;
+
     system("pause");
     return 0;
 }
