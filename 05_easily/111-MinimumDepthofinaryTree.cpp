@@ -51,6 +51,25 @@ public:
         return min_depth+1;
     }
 };
+
+class Solution1 {
+public:
+    int minDepth(TreeNode* root) {
+        if(!root){
+            return 0;
+        }
+        if(!root->left && !root->right){
+            return 1;
+        }
+        if(root->left && !root->right){
+            return minDepth(root->left) + 1;
+        }
+        if(root->right && !root->left){
+            return minDepth(root->right) + 1;
+        }
+        return min(minDepth(root->left), minDepth(root->right)) + 1;
+    }
+};
 int main(){
 
     system("pause");

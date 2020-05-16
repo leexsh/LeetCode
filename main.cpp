@@ -3,51 +3,25 @@ using namespace std;
 //
 // Created by leexsh on 2020/3/26.
 //
-
-class Solution {
+class TreeNode{
 public:
-    vector<vector<int>> res;
-    vector<vector<int>> permute(vector<int>& nums) {
-        if(nums.empty())
-        {
-            return res;
-        }
-        sort(nums.begin(), nums.end());
-        vector<int> path;
-        dfs(nums,path);
-        return res;
-    }
-    void dfs(vector<int> &nums, vector<int> &path)
-    {
-        if(nums.size() == path.size())
-        {
-            res.push_back(path);
-            return;
-        }
-        for (int i = 0; i < nums.size(); ++i) {
-            if(find(path.begin(), path.end(), nums[i]) == path.end())
-            {
-                path.push_back(nums[i]);
-                dfs(nums,path);
-                path.pop_back();
-            }
-
-
-        }
-    }
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode(int value) :val(value), left(nullptr), right(nullptr){}
 };
+
 int main() {
-    priority_queue<int,vector<int>,greater<int>> que;
-
-    que.push(3);
-    que.push(6);
-    que.push(2);
-    que.push(1);
-    while(!que.empty())
-    {
-        cout<<que.top();
-        que.pop();
-    }
-
+    int a[10]={0,1,2,3,4,5,6,7,8,9};
+    cout<<"1- "<<a<<endl;
+    cout<<"2- "<<a+1<<endl;
+    cout<<"3- "<<a[1]<<endl;
+    cout<<"4- "<<&a[0]<<endl;
+    cout<<"5- "<<&a<<endl;
+    cout<<"6- "<<&a[0] + 1<<endl;
+    cout<<"7- "<<a+1<<endl;
+    cout<<"8- "<<&a+1<<endl;
+    cout<<"9- "<<*(a+1)<<endl;
+    cout<<"10- "<<*(&a+1)<<endl;
     return 0;
 }

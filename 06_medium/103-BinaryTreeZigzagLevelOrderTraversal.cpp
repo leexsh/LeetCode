@@ -21,44 +21,41 @@ public:
 
 class Solution {
 public:
+    vector<vector<int>> res;
     vector<vector<int>> zigzagLevelOrder(TreeNode* root) {
-        if(root == nullptr)
+        if(!root)
         {
-            return vector<vector<int>>();
+            return res;
         }
-        queue<TreeNode *> st;
-        vector<vector<int>> vec;
-        st.push(root);
+        deque<TreeNode*> dq;
+        dq.push_back(root);
         int level = 0;
-        while(!st.empty())
+        while (!dq.empty())
         {
-            int size = st.size();
-//            用deque可以提高速度 不然也可以用vector
+            int size = dq.size();
             deque<int> temp;
-            while(size--)
-            {
-                TreeNode *p = st.front();
-                st.pop();
+            for (int i = 0; i < size; ++i) {
+                TreeNode *node = dq.front();
+                dq.pop_front();
                 if(level % 2 == 0){
-                    temp.push_back(p->val);
+                    temp.push_back(node->val);
                 } else{
-                    temp.push_front(p->val);
+                    temp.push_front(node->val);
                 }
-                if(p->left){
-                    st.push(p->left);
+                if(node->left){
+                    dq.push_back(node->left);
                 }
-                if(p->right){
-                    st.push(p->right);
+                if(node->right){
+                    dq.push_back(node->right);
                 }
-
             }
             level++;
-            vec.push_back(vector<int>(temp.begin(), temp.end()));
+            res.push_back(vector<int>(temp.begin(), temp.end()));
         }
-        return vec;
+        return res;
     }
-};
 
+};
 int main() {
 
     cout<<endl;
