@@ -12,16 +12,6 @@ public:
 };
 
 int main() {
-    int a[10]={0,1,2,3,4,5,6,7,8,9};
-    cout<<"1- "<<a<<endl;
-    cout<<"2- "<<a+1<<endl;
-    cout<<"3- "<<a[1]<<endl;
-    cout<<"4- "<<&a[0]<<endl;
-    cout<<"5- "<<&a<<endl;
-    cout<<"6- "<<&a[0] + 1<<endl;
-    cout<<"7- "<<a+1<<endl;
-    cout<<"8- "<<&a+1<<endl;
-    cout<<"9- "<<*(a+1)<<endl;
-    cout<<"10- "<<*(&a+1)<<endl;
+    cout<<1e5<<endl;
     return 0;
 }
