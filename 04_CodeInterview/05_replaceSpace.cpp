@@ -27,6 +27,7 @@ public:
         return str;
     }
 };
+
 int main(){
 
     system("pause");

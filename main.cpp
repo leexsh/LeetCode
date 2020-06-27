@@ -10,7 +10,6 @@ public:
     TreeNode *right;
     TreeNode(int value) :val(value), left(nullptr), right(nullptr){}
 };
-
 int main() {
     cout<<1e5<<endl;
     return 0;

@@ -56,8 +56,49 @@ public:
     }
 };
 
-int main() {
 
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
+class Solution1 {
+public:
+    TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder) {
+        if (preorder.empty() || inorder.empty()) {
+            return nullptr;
+        }
+        int value = preorder[0];
+        TreeNode *root = new TreeNode(value);
 
-    return 0;
-}
+        vector<int> preLeft, inLeft, preRight, inRight;
+        int gen = 0;
+        int i;
+        for(i = 0; i < inorder.size(); i++){
+            if (inorder[i] == value) {
+                gen = i;
+                break;
+            }
+        }
+
+        for (i = 0; i < gen; ++i) {
+            preLeft.push_back(preorder[i+1]);
+            inLeft.push_back(inorder[i]);
+        }
+
+        for (i = gen + 1; i < preorder.size(); ++i) {
+            preRight.push_back(preorder[i]);
+            inRight.push_back(inorder[i]);
+        }
+
+        root->left = buildTree(preLeft, inLeft);
+        root->right = buildTree(preRight, inRight);
+
+        return root;
+
+    }
+};

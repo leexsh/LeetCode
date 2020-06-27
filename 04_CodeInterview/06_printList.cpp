@@ -21,6 +21,8 @@ public:
 
     }
 };
+
+// 借助辅助栈结构
 class Solution {
 public:
     vector<int> reversePrint(ListNode* head) {
@@ -38,6 +40,19 @@ public:
     }
 };
 
+
+class Solution1 {
+public:
+    vector<int> res;
+    vector<int> reversePrint(ListNode* head) {
+        if (!head) {
+            return res;
+        }
+        reversePrint(head->next);
+        res.push_back(head->val);
+        return res;
+    }
+};
 ListNode *reverseList(ListNode *head)
 {
     if(head == nullptr || head->next == nullptr){
