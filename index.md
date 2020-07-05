@@ -3,7 +3,7 @@
 #### 回溯:17 22 39 40 46
 ### 未做：24 25 29 30 31 32
 
-### 2020-06-27 做到 04_CodeInterview  第十题 
+### 2020-07-04 做到 04_CodeInterview  第14-2题 
 
 ## 0_newCoderDailyQuestion 牛客的每日一题 网址:https://blog.nowcoder.net/n/f1e7717cc0cd44ea8642b066805785ea
 ## 01_Daily question leetcodeD的每日一题

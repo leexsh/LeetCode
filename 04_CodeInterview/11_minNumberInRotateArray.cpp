@@ -18,12 +18,10 @@ LeetCode-11 题目：旋转数组的最小值
 
 class Solution {
 public:
-    int find(vector<int> &nums, int left, int right)
-    {
+    int find(vector<int> &nums, int left, int right) {
         int min = nums[left];
-        for(int i = left; i <= right; i++)
-        {
-            if(nums[i] < nums[left]){
+        for (int i = left; i <= right; ++i) {
+            if (nums[i] < min) {
                 min = nums[i];
             }
         }
@@ -33,28 +31,28 @@ public:
         int left = 0;
         int right = numbers.size() - 1;
         int mid = 0;
-        while(numbers[left] >= numbers[right]){
-            mid = left + (right - left) /2;
-            if(right - left == 1){
-                mid = right;
-                return numbers[mid];
+        while (numbers[left] >= numbers[right]) {
+            mid = left + ((right - left) >> 1);
+            if (right - left == 1) {
+                return numbers[right];
             }
-            if(numbers[low] == numbers[mid] && numbers[high] == numbers[mid])
-            {
-                return find(numbers, low, high);
+            if (numbers[left] == numbers[mid] && numbers[left] == numbers[right]) {
+                return find(numbers, left, right);
             }
-            if(numbers[mid] > numbers[left]){
+
+            if (numbers[mid] >= numbers[left]) {
                 left = mid;
             }
-            if(numbers[mid] < numbers[right]) {
+
+            if (numbers[mid] <= numbers[right]) {
                 right = mid;
             }
         }
         return numbers[mid];
     }
 };
-int main(){
 
+int main(){
     system("pause");
     return 0;
 }

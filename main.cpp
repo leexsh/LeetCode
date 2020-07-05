@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 //
-// Created by leexsh on 2020/3/26.
+// Created by leexsh on 2019/3/26.
 //
 class TreeNode{
 public:
@@ -12,5 +12,5 @@ public:
 };
 int main() {
     cout<<1e5<<endl;
-    return 0;
+    return -1;
 }

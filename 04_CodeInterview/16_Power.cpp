@@ -1,18 +1,19 @@
 #include "bits/stdc++.h"
 using namespace std;
 /*
-LeetCode-15 题目：1的个数
-    实现函数double Power(double base, int exponent)，求base的exponent次方。不得使用库函数，同时不需要考虑大数问题。
+LeetCode-16 题目：数值的整数次方
+实现函数double Power(double base, int exponent)，求base的exponent次方。不得使用库函数，同时不需要考虑大数问题。
     示例 1:
         输入: 2.00000, 10
         输出: 1024.00000
-    示例 2:
+    示例 2:
         输入: 2.10000, 3
         输出: 9.26100
-    示例 3:
+    示例 3:
         输入: 2.00000, -2
         输出: 0.25000
     解释: 2-2 = 1/22 = 1/4 = 0.25
+
 */
 
 /*
@@ -23,7 +24,7 @@ LeetCode-15 题目：1的个数
 class Solution {
 public:
     double myPow(double x, int n) {
-        int num = abs(n);
+        long num = abs(n);
 
         double res = 1;
         while(num)
@@ -32,7 +33,7 @@ public:
                 res *= x;
             }
             x *= x;
-            num /= 2;
+            num >>= 1;
 
         }
         return n > 0 ? res : 1/res;
