@@ -20,31 +20,37 @@ struct ListNode {
     ListNode *next;
     ListNode(int x) : val(x), next(NULL) {}
 };
-ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-    ListNode *pre = new ListNode(-1);;
-    ListNode *cur = pre;
-    int sum;//和
-    int carry = 0;//进位标志
-    while(l1 || l2){
-        int x = l1 ? l1->val : 0;
-        int y = l2 ? l2->val : 0;
-        int sum = x + y + carry;//加进位
-        carry = sum / 10;
-        sum = sum % 10;
-        cur->next = new ListNode(sum);
-        cur = cur->next;
-        if(l1){
-            l1 = l1->next;
+
+class Solution {
+public:
+    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+        ListNode* pre = new ListNode(-1);
+        ListNode* cur = pre;
+        int sum;
+        int carray = 0;
+        while(l1 || l2)
+        {
+            int x = l1 ? l1->val : 0;
+            int y = l2 ? l2->val : 0 ;
+            sum = x + y + carray;
+            carray = sum / 10;
+            sum %= 10;
+            cur->next = new ListNode(sum);
+            cur = cur->next;
+            if (l1) {
+                l1 = l1->next;
+            }
+            if (l2) {
+                l2 = l2->next;
+            }
         }
-        if(l2){
-            l2 = l2->next;
+        if (carray == 1) {
+            cur->next = new ListNode(1);
         }
+        return pre->next;
     }
-    if(carry){
-        cur->next = new ListNode(1);
-    }
-    return pre->next;
-}
+};
+
 int main(){
 
     system("pause");
