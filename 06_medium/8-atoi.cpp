@@ -43,58 +43,47 @@ LeetCode-8 题目：atoi
 class Solution {
 public:
     int myAtoi(string str) {
-        if(str.empty())
-        {
+        if (str.empty()) {
             return 0;
         }
-
-        int i = 0;
         int n = str.size();
-        int res = 0;
-
-//        负数标志
-        bool isF = false;
-//        空格
-        while(i < n && str[i] == ' ')
-        {
+        int i = 0;
+        while (i < n && str[i] == ' ') {
             i++;
         }
-//        没有数字
-        if(i == n)
-        {
+        if (i == n) {
             return 0;
         }
-
-        if(str[i] == '-')
-        {
-            isF = true;
+        bool flag = false;
+        if (str[i] == '-') {
+            flag = true;
         }
-        if(str[i] == '-' || str[i] == '+')
-        {
+        if (str[i] == '-' || str[i] == '+') {
             i++;
         }
-
-        while(i < n && str[i] >= '0' && str[i] <= '9')
-        {
+        int res = 0;
+        while (i < n && str[i] >= '0' && str[i] <= '9') {
             int temp = str[i] - '0';
-            if((isF == false) && ((res > 214748364 ||(res == 214748364 && temp >= 7) ))){
+            if (flag == false && (res > 214748364 || (res == 214748364 && temp >= 7))){
                 return 2147483647;
             }
-
-            if((isF==true) &&((-res < -214748364 || (-res == -214748364 && temp >= 8))))
-            {
+            if (flag && (res > 214748364 || (res == 214748364 && temp >= 8))) {
                 return -2147483648;
             }
-            res = res * 10 + temp;
+            res *= 10;
+
+            res += temp;
             i++;
         }
-        return isF ? -res : res;
-
+        return flag ? -res : res;
     }
 };
 int main(){
 //    make_pair(1,2)
-//    
+//
+    string s = "words and 987";
+    Solution ss;
+    ss.myAtoi(s);
     system("pause");
     return 0;
 }

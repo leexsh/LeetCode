@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "D:/Code/LeetCode/06_medium/64-MinimumPathSum.cpp" "D:/Code/LeetCode/cmake-build-debug/CMakeFiles/out.dir/06_medium/64-MinimumPathSum.cpp.obj"
+  "D:/Code/LeetCode/06_medium/8-atoi.cpp" "D:/Code/LeetCode/cmake-build-debug/CMakeFiles/out.dir/06_medium/8-atoi.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

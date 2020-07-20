@@ -23,28 +23,29 @@ LeetCode-3 题目：无重复字符串的最长子串
     滑动窗口
     维持一个最大的窗口
  */
-int lengthOfLongestSubstring(string s) {
-    int i = 0;
-    int j = 0;
-    int n = s.size();
-    set<char> se;
-    int res = 0;
-    while (i < n && j < n)
-    {
-        /* code */
-        if(!se.count(s[j])){
-            se.insert(s[j++]);
-            res = max(res, j - i);
-        }
-        else
-        {
-            /* code */
-            se.erase(s[i++]);
-        }
-        
-    }
-}
 
+class Solution {
+public:
+    int lengthOfLongestSubstring(string s) {
+        if (s.empty()) {
+            return 0;
+        }
+        int i = 0;
+        int j = 0;
+        set<char> st;
+        int max_res = 0;
+        while(j < s.size()) {
+            if (!st.count(s[j])) {
+                st.insert(s[j++]);
+                max_res = max(max_res, j - i);
+            }else {
+                st.erase(s[i++]);
+            }
+        }
+
+        return max_res;
+    }
+};
 int main(){
 
     system("pause");

@@ -135,32 +135,32 @@ out/fast:
 	$(MAKE) -f CMakeFiles\out.dir\build.make CMakeFiles/out.dir/build
 .PHONY : out/fast
 
-06_medium/64-MinimumPathSum.obj: 06_medium/64-MinimumPathSum.cpp.obj
+06_medium/8-atoi.obj: 06_medium/8-atoi.cpp.obj
 
-.PHONY : 06_medium/64-MinimumPathSum.obj
+.PHONY : 06_medium/8-atoi.obj
 
 # target to build an object file
-06_medium/64-MinimumPathSum.cpp.obj:
-	$(MAKE) -f CMakeFiles\out.dir\build.make CMakeFiles/out.dir/06_medium/64-MinimumPathSum.cpp.obj
-.PHONY : 06_medium/64-MinimumPathSum.cpp.obj
+06_medium/8-atoi.cpp.obj:
+	$(MAKE) -f CMakeFiles\out.dir\build.make CMakeFiles/out.dir/06_medium/8-atoi.cpp.obj
+.PHONY : 06_medium/8-atoi.cpp.obj
 
-06_medium/64-MinimumPathSum.i: 06_medium/64-MinimumPathSum.cpp.i
+06_medium/8-atoi.i: 06_medium/8-atoi.cpp.i
 
-.PHONY : 06_medium/64-MinimumPathSum.i
+.PHONY : 06_medium/8-atoi.i
 
 # target to preprocess a source file
-06_medium/64-MinimumPathSum.cpp.i:
-	$(MAKE) -f CMakeFiles\out.dir\build.make CMakeFiles/out.dir/06_medium/64-MinimumPathSum.cpp.i
-.PHONY : 06_medium/64-MinimumPathSum.cpp.i
+06_medium/8-atoi.cpp.i:
+	$(MAKE) -f CMakeFiles\out.dir\build.make CMakeFiles/out.dir/06_medium/8-atoi.cpp.i
+.PHONY : 06_medium/8-atoi.cpp.i
 
-06_medium/64-MinimumPathSum.s: 06_medium/64-MinimumPathSum.cpp.s
+06_medium/8-atoi.s: 06_medium/8-atoi.cpp.s
 
-.PHONY : 06_medium/64-MinimumPathSum.s
+.PHONY : 06_medium/8-atoi.s
 
 # target to generate assembly for a file
-06_medium/64-MinimumPathSum.cpp.s:
-	$(MAKE) -f CMakeFiles\out.dir\build.make CMakeFiles/out.dir/06_medium/64-MinimumPathSum.cpp.s
-.PHONY : 06_medium/64-MinimumPathSum.cpp.s
+06_medium/8-atoi.cpp.s:
+	$(MAKE) -f CMakeFiles\out.dir\build.make CMakeFiles/out.dir/06_medium/8-atoi.cpp.s
+.PHONY : 06_medium/8-atoi.cpp.s
 
 main.obj: main.cpp.obj
 
@@ -199,9 +199,9 @@ help:
 	@echo ... out
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... 06_medium/64-MinimumPathSum.obj
-	@echo ... 06_medium/64-MinimumPathSum.i
-	@echo ... 06_medium/64-MinimumPathSum.s
+	@echo ... 06_medium/8-atoi.obj
+	@echo ... 06_medium/8-atoi.i
+	@echo ... 06_medium/8-atoi.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

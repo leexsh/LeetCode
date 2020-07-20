@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/out.dir/06_medium/64-MinimumPathSum.cpp.obj"
+  "CMakeFiles/out.dir/06_medium/8-atoi.cpp.obj"
   "libout.dll.a"
   "out.exe"
   "out.exe.manifest"

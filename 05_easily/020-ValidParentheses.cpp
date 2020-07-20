@@ -29,37 +29,36 @@ LeetCode 20-题目有效的括号：
         很明显，肯定是用到栈的相关内容，当遇到左括号的时候进行入栈，当遇到右括号的时候，比对右括号是否与栈顶的元素相同
     相同则出栈，不相同则返回False，最后查看栈的大小，若为空则是true，否则false。
  */
-bool isValid(string s) {
-    // 奇数的序列s肯定不满足 返回false
-    if(s.size() % 2 != 0)
-        return false;
-//    栈
-    stack<char> st;
-    for(auto i : s)
-    {
-        if(i == '(' || i == '[' || i == '{'){
-            st.push(i);
-        } else{
-            if(st.empty()){
-                return false;
-            }
-            if(i == '}' && st.top() != '{')
-            {
-                return false;
-            }
-            if(i == ']' && st.top() != '[')
-            {
-                return  false;
-            }
-            if(i == ')' && st.top() != '(')
-            {
-                return false;
-            }
-            st.pop();
+
+class Solution {
+public:
+    bool isValid(string s) {
+        if (s.size() & 1) {
+            return false;
         }
+
+        stack<char> st;
+        for (auto i : s) {
+            if (i == '[' || i == '(' || i == '{') {
+                st.push(i);
+            }
+            else {
+                if (st.empty()) {
+                    return false;
+                }
+                if (st.top() == '(' && i != ')') {
+                    return false;
+                } else if (st.top() == '{' && i != '}') {
+                    return false;
+                } else if (st.top() == '[' && i != ']') {
+                    return false;
+                }
+                st.pop();
+            }
+        }
+        return st.empty();
     }
-    return st.empty();
-}
+};
 int main(){
     string s = "[][][]()(){}{}";
     bool flag = isValid(s);
