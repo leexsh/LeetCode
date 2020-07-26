@@ -122,7 +122,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="D:/Code/LeetCode/06_medium/8-atoi.cpp">
+		<Unit filename="D:/Code/LeetCode/05_easily/083-RemoveDuplicatesfromSortedList.cpp">
 			<Option target="out"/>
 		</Unit>
 		<Unit filename="D:/Code/LeetCode/main.cpp">

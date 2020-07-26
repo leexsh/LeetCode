@@ -27,27 +27,23 @@ public:
         if (!head) {
             return nullptr;
         }
+        ListNode* l1 = new ListNode(-1);
+        ListNode* l2 = new ListNode(-1);
+        ListNode* cur1 = l1, *cur2 = l2;
+        ListNode* p = head;
 
-//        小于的节点
-        ListNode *pHead = new ListNode(-1);
-        ListNode *mHead = new ListNode(-1);
-        ListNode *lessNode = pHead;
-        ListNode *moreNode = mHead;
-        while (head)
-        {
-            if(head->val < x)
-            {
-                lessNode->next = head;
-                lessNode = lessNode->next;
-            } else{
-                moreNode->next = head;
-                moreNode = moreNode->next;
+        for (; p != nullptr; p = p->next) {
+            if (p->val < x) {
+                cur1->next = p;
+                cur1 = cur1->next;
+            } else {
+                cur2->next = p;
+                cur2 = cur2->next;
             }
-            head = head->next;
         }
-        moreNode->next = nullptr;
-        lessNode->next = mHead->next;
-        return pHead->next;
+        cur2->next = nullptr;
+        cur1->next = l2->next;
+        return l1;
     }
 };
 int main(){

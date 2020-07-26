@@ -135,32 +135,32 @@ out/fast:
 	$(MAKE) -f CMakeFiles\out.dir\build.make CMakeFiles/out.dir/build
 .PHONY : out/fast
 
-06_medium/8-atoi.obj: 06_medium/8-atoi.cpp.obj
+05_easily/083-RemoveDuplicatesfromSortedList.obj: 05_easily/083-RemoveDuplicatesfromSortedList.cpp.obj
 
-.PHONY : 06_medium/8-atoi.obj
+.PHONY : 05_easily/083-RemoveDuplicatesfromSortedList.obj
 
 # target to build an object file
-06_medium/8-atoi.cpp.obj:
-	$(MAKE) -f CMakeFiles\out.dir\build.make CMakeFiles/out.dir/06_medium/8-atoi.cpp.obj
-.PHONY : 06_medium/8-atoi.cpp.obj
+05_easily/083-RemoveDuplicatesfromSortedList.cpp.obj:
+	$(MAKE) -f CMakeFiles\out.dir\build.make CMakeFiles/out.dir/05_easily/083-RemoveDuplicatesfromSortedList.cpp.obj
+.PHONY : 05_easily/083-RemoveDuplicatesfromSortedList.cpp.obj
 
-06_medium/8-atoi.i: 06_medium/8-atoi.cpp.i
+05_easily/083-RemoveDuplicatesfromSortedList.i: 05_easily/083-RemoveDuplicatesfromSortedList.cpp.i
 
-.PHONY : 06_medium/8-atoi.i
+.PHONY : 05_easily/083-RemoveDuplicatesfromSortedList.i
 
 # target to preprocess a source file
-06_medium/8-atoi.cpp.i:
-	$(MAKE) -f CMakeFiles\out.dir\build.make CMakeFiles/out.dir/06_medium/8-atoi.cpp.i
-.PHONY : 06_medium/8-atoi.cpp.i
+05_easily/083-RemoveDuplicatesfromSortedList.cpp.i:
+	$(MAKE) -f CMakeFiles\out.dir\build.make CMakeFiles/out.dir/05_easily/083-RemoveDuplicatesfromSortedList.cpp.i
+.PHONY : 05_easily/083-RemoveDuplicatesfromSortedList.cpp.i
 
-06_medium/8-atoi.s: 06_medium/8-atoi.cpp.s
+05_easily/083-RemoveDuplicatesfromSortedList.s: 05_easily/083-RemoveDuplicatesfromSortedList.cpp.s
 
-.PHONY : 06_medium/8-atoi.s
+.PHONY : 05_easily/083-RemoveDuplicatesfromSortedList.s
 
 # target to generate assembly for a file
-06_medium/8-atoi.cpp.s:
-	$(MAKE) -f CMakeFiles\out.dir\build.make CMakeFiles/out.dir/06_medium/8-atoi.cpp.s
-.PHONY : 06_medium/8-atoi.cpp.s
+05_easily/083-RemoveDuplicatesfromSortedList.cpp.s:
+	$(MAKE) -f CMakeFiles\out.dir\build.make CMakeFiles/out.dir/05_easily/083-RemoveDuplicatesfromSortedList.cpp.s
+.PHONY : 05_easily/083-RemoveDuplicatesfromSortedList.cpp.s
 
 main.obj: main.cpp.obj
 
@@ -199,9 +199,9 @@ help:
 	@echo ... out
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... 06_medium/8-atoi.obj
-	@echo ... 06_medium/8-atoi.i
-	@echo ... 06_medium/8-atoi.s
+	@echo ... 05_easily/083-RemoveDuplicatesfromSortedList.obj
+	@echo ... 05_easily/083-RemoveDuplicatesfromSortedList.i
+	@echo ... 05_easily/083-RemoveDuplicatesfromSortedList.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

@@ -56,27 +56,27 @@ include CMakeFiles/out.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/out.dir/flags.make
 
-CMakeFiles/out.dir/06_medium/8-atoi.cpp.obj: CMakeFiles/out.dir/flags.make
-CMakeFiles/out.dir/06_medium/8-atoi.cpp.obj: ../06_medium/8-atoi.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Code\LeetCode\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/out.dir/06_medium/8-atoi.cpp.obj"
-	D:\software\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\out.dir\06_medium\8-atoi.cpp.obj -c D:\Code\LeetCode\06_medium\8-atoi.cpp
+CMakeFiles/out.dir/05_easily/083-RemoveDuplicatesfromSortedList.cpp.obj: CMakeFiles/out.dir/flags.make
+CMakeFiles/out.dir/05_easily/083-RemoveDuplicatesfromSortedList.cpp.obj: ../05_easily/083-RemoveDuplicatesfromSortedList.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Code\LeetCode\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/out.dir/05_easily/083-RemoveDuplicatesfromSortedList.cpp.obj"
+	D:\software\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\out.dir\05_easily\083-RemoveDuplicatesfromSortedList.cpp.obj -c D:\Code\LeetCode\05_easily\083-RemoveDuplicatesfromSortedList.cpp
 
-CMakeFiles/out.dir/06_medium/8-atoi.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/out.dir/06_medium/8-atoi.cpp.i"
-	D:\software\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Code\LeetCode\06_medium\8-atoi.cpp > CMakeFiles\out.dir\06_medium\8-atoi.cpp.i
+CMakeFiles/out.dir/05_easily/083-RemoveDuplicatesfromSortedList.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/out.dir/05_easily/083-RemoveDuplicatesfromSortedList.cpp.i"
+	D:\software\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Code\LeetCode\05_easily\083-RemoveDuplicatesfromSortedList.cpp > CMakeFiles\out.dir\05_easily\083-RemoveDuplicatesfromSortedList.cpp.i
 
-CMakeFiles/out.dir/06_medium/8-atoi.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/out.dir/06_medium/8-atoi.cpp.s"
-	D:\software\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Code\LeetCode\06_medium\8-atoi.cpp -o CMakeFiles\out.dir\06_medium\8-atoi.cpp.s
+CMakeFiles/out.dir/05_easily/083-RemoveDuplicatesfromSortedList.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/out.dir/05_easily/083-RemoveDuplicatesfromSortedList.cpp.s"
+	D:\software\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Code\LeetCode\05_easily\083-RemoveDuplicatesfromSortedList.cpp -o CMakeFiles\out.dir\05_easily\083-RemoveDuplicatesfromSortedList.cpp.s
 
 # Object files for target out
 out_OBJECTS = \
-"CMakeFiles/out.dir/06_medium/8-atoi.cpp.obj"
+"CMakeFiles/out.dir/05_easily/083-RemoveDuplicatesfromSortedList.cpp.obj"
 
 # External object files for target out
 out_EXTERNAL_OBJECTS =
 
-out.exe: CMakeFiles/out.dir/06_medium/8-atoi.cpp.obj
+out.exe: CMakeFiles/out.dir/05_easily/083-RemoveDuplicatesfromSortedList.cpp.obj
 out.exe: CMakeFiles/out.dir/build.make
 out.exe: CMakeFiles/out.dir/linklibs.rsp
 out.exe: CMakeFiles/out.dir/objects1.rsp

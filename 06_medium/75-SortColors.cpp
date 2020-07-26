@@ -19,32 +19,26 @@ LeetCode- 题目：
 思路：
     荷兰国旗问题
  */
-void sortColors(vector<int>& nums) {
-    if(nums.empty())
-        return ;
-    int left = -1;
-    int right = nums.size();
-    int index = 0;
-    while (index != right)
-    {
-        if(nums[index] < 1){
-            int temp = nums[index];
-            nums[index++] = nums[++left];
-            nums[left] = temp;       
-        }
-        else if(nums[index] == 1){
-            index++;
-        }
-        else
-        {
-            int temp = nums[--right];
-            nums[right] = nums[index];
-            nums[index] = temp;
+
+
+class Solution {
+public:
+    void sortColors(vector<int>& nums) {
+        int left = 0;
+        int right = nums.size()-1;
+
+        int cur = 0;
+        while (cur <= right) {
+            if (nums[cur] < 1) {
+                swap(nums[cur++], nums[left++]);
+            }else if (nums[cur] == 1) {
+                cur++;
+            } else {
+                swap(nums[cur], nums[right--]);
+            }
         }
     }
-
-}
-
+};
 int main(){
 
     system("pause");

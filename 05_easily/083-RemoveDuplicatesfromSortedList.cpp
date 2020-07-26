@@ -22,34 +22,38 @@ LeetCode -83题目：删除链表中的重复元素
  };
 
  
- ListNode* deleteDuplicates(ListNode* head) {
-     if(head == NULL)
-        return NULL;
-    ListNode *p = head, *pDel;
-    while(p && p->next){
-        if(p->val == p->next->val){
-            pDel = p->next;
-            p->next = pDel->next;
-            delete pDel;
+
+class Solution {
+public:
+    ListNode* deleteDuplicates(ListNode* head) {
+        if (!head) {
+            return nullptr;
         }
-        else
+        ListNode* p = head;
+
+        while (p && p->next)
         {
-            p = p->next;
-        }   
+            if (p->val == p->next->val) {
+                p->next = p->next->next;
+            }else {
+                p = p->next;
+            }
+        }
+        return head;
     }
-    return head;
- }
- 
+};
 int main(){
     ListNode *l1 =new ListNode(1);
     ListNode *l2 =new ListNode(1);
     ListNode *l3 =new ListNode(2);
-    ListNode *l4 =new ListNode(3);
-    ListNode *l5 =new ListNode(3);
+//    ListNode *l4 =new ListNode(3);
+//    ListNode *l5 =new ListNode(3);
     l1->next = l2;
     l2->next = l3;
-    l3->next = l4;
-    l4->next = l5;
+//    l3->next = l4;
+//    l4->next = l5;
+Solution s;
+s.deleteDuplicates(l1);
     ListNode *p = l1;
     deleteDuplicates(l1);
     while (p)
@@ -58,7 +62,7 @@ int main(){
         cout<<p->val<<" ";
         p = p->next;
     }
-    
+
     system("pause");
     return 0;
 }
