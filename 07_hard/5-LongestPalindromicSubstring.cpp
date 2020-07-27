@@ -67,10 +67,11 @@ public:
 };
 
 // 中心扩展法
-class Solution2 {
+class Solution2{
 public:
-    string zhongxin(string s, int i, int j ){
-        while(s[i] == s[j] && i >= 0 && j < s.size())
+    string expends(string s, int i, int j)
+    {
+        while(i >= 0 && j < s.size() && s[i] == s[j])
         {
             i--;
             j++;
@@ -78,17 +79,20 @@ public:
         return s.substr(i + 1, j - i - 1);
     }
     string longestPalindrome(string s) {
-        if(s.size() <= 1){
+        if(s.size() < 2)
+        {
             return s;
         }
-        string str = "";
-        for(int i = 0; i < s.size(); i++){
-            string s1 = zhongxin(s,i,i);
-            string s2 = zhongxin(s, i, i+1);
-            string s3 = s1.size() > s2.size() ? s1 : s2;
-            str = str.size() > s3.size() ? str : s3;
+        string ss("");
+        for (int i = 0; i < s.size(); ++i) {
+            string string1 = expends(s, i, i);
+            string string2 = expends(s, i, i + 1);
+            string sss = string1.size() > string2.size() ? string1 : string2;
+            ss = ss.size() > sss.size() ? ss : sss;
         }
-        return str;
+
+        return ss;
+
     }
 };
 int main(){
