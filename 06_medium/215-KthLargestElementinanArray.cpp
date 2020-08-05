@@ -37,6 +37,20 @@ public:
         return que.top();
     }
 };
+
+class Solutio1n {
+public:
+    int findKthLargest(vector<int>& nums, int k) {
+        priority_queue<int,vector<int>, greater<int>> dq(nums.begin(), nums.begin() + k);
+        for (int i = k; i < nums.size(); ++i) {
+            if (nums[i] > dq.top()) {
+                dq.pop();
+                dq.push(nums[i]);
+            }
+        }
+        return dq.top();
+    }
+};
 int main(){
 
     system("pause");

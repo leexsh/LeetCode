@@ -43,6 +43,34 @@ public:
         return hasPathSum(root->left, sum) || hasPathSum(root->right, sum);
     }
 };
+
+class Solution1 {
+public:
+    bool hasPathSum(TreeNode* root, int sum) {
+        if (!root) {
+            return false;
+        }
+        deque<TreeNode*> dq;
+        dq.push_back(root);
+        while (!dq.empty()) {
+            root = dq.front();
+            dq.pop_front();
+            if (root->left == nullptr && root->right == nullptr && root->val == sum) {
+                return true;
+            }
+            if (root->left) {
+                root->left->val += root->val;
+                dq.push_back(root->left);
+            }
+            if (root->right) {
+                root->right->val += root->val;
+
+                dq.push_back(root->right);
+            }
+        }
+        return false;
+    }
+};
 int main(){
 
     system("pause");

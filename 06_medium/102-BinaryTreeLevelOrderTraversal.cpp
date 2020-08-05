@@ -56,6 +56,35 @@ vector<vector<int>> levelOrder(TreeNode* root) {
     }
     return vec;
 }
+
+class Solution {
+public:
+    vector<vector<int>> res;
+    vector<vector<int>> levelOrder(TreeNode* root) {
+        if (!root) {
+            return res;
+        }
+        deque<TreeNode*> dq;
+        dq.push_back(root);
+        while (!dq.empty()) {
+            int size = dq.size();
+            vector<int> temp;
+            for (int i = 0; i < size; ++i) {
+                root = dq.front();
+                dq.pop_front();
+                temp.push_back(root->val);
+                if (root->left) {
+                    dq.push_back(root->left);
+                }
+                if (root->right) {
+                    dq.push_back(root->right);
+                }
+            }
+            res.push_back(temp);
+        }
+        return res;
+    }
+};
 int main(){
 
     system("pause");

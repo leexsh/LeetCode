@@ -25,7 +25,42 @@ struct ListNode {
     ListNode *next;
     ListNode(int x) : val(x), next(NULL) {}
 };
- 
+
+// 翻转链表
+class Solution {
+public:
+    bool isPalindrome(ListNode* head) {
+        if (!head || !head->next) {
+            return true;
+        }
+        ListNode *slow, *fast;
+        while (fast && fast->next)
+        {
+            fast = fast->next->next;
+            slow = slow->next;
+        }
+        ListNode* cur = slow;
+        ListNode* p = slow->next;
+        while (p) {
+            ListNode *n = p->next;
+            p->next = cur;
+            cur = p;
+            p = n;
+        }
+        slow->next = nullptr;
+        while (head && cur) {
+            if (head->val != cur->val) {
+                return false;
+            }
+            head = head->next;
+            cur = cur->next;
+        }
+        return true;
+
+    }
+};
+
+
 // 栈的方法 时间复杂度O(N) 空间复杂度O(N)
 bool isPalindrome1(ListNode* head) {
     stack<ListNode*> s;
@@ -85,6 +120,8 @@ bool isPalindrome(ListNode* head) {
     }
     return res;
 }
+
+
 int main(){
 
     system("pause");

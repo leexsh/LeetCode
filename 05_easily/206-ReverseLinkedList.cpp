@@ -33,6 +33,20 @@ ListNode* reverseList1(ListNode* head) {
     }
     return pre->next;
 }
+class Solution {
+public:
+    ListNode* reverseList(ListNode* head) {
+        ListNode* cur = nullptr;
+        while(head) {
+            ListNode* next = head->next;
+            head->next = cur;
+            cur = head;
+            head = next;
+        }
+        return cur;
+    }
+};
+
 //递归
 ListNode* reverseList(ListNode* head) {
     if (head == NULL || head->next == NULL) return head;
