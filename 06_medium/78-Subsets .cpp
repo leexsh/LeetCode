@@ -39,9 +39,8 @@ public:
 
     void dfs(vector<int> &nums, vector<int> &path,int begin)
     {
-        if(path.size() <= nums.size())
-        {
-            res.push_back(path);
+        res.push_back(path);
+        if (begin >= nums.size()) {
             return;
         }
         for (int i = begin; i < nums.size(); ++i) {

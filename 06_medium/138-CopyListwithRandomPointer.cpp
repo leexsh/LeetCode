@@ -32,25 +32,6 @@ public:
         random = _random;
     }
 };
-Node* copyRandomList(Node* head) {
-    if(head == NULL){
-        return NULL;
-    }
-    unordered_map<Node*, Node*> m;
-    Node *cur = head;
-    
-    while(cur){
-        m[cur] = new Node(cur->val, NULL, NULL);
-        cur = cur->next;
-    }
-    cur = head;
-    while(cur){
-        m[cur]->next = m[cur->next];
-        m[cur]->random = m[cur->random];
-        cur = cur->next;
-    }
-    return m[head];
-}
 
 Node* copyRandomList1(Node* head) {
     if(head == NULL){
@@ -84,6 +65,60 @@ Node* copyRandomList1(Node* head) {
     }
     return res;
 }
+
+class Solution {
+public:
+    Node* copyRandomList(Node* head) {
+        map<Node*, Node*> map;
+        Node* p = head;
+        for (; p; p = p->next) {
+            map[p] = new Node(p->val, nullptr, nullptr);
+        }
+        p = head;
+        for (; p; p = p->next)
+        {
+            map[p]->next = map[p->next];
+            map[p]->random = map[p->random];
+        }
+        return map[head];
+    }
+};
+class Solution1 {
+public:
+
+    Node* copyRandomList(Node* head) {
+        if (!head) {
+            return nullptr;
+        }
+        // create
+        Node* p = head;
+        while (p) {
+            Node* nex = p->next;
+            p->next = new Node(p->val, nex, nullptr);
+            p = nex;
+        }
+
+        // copy random
+        p = head;
+        while (p) {
+            p->next->random = p->random ? p->random->next : nullptr;
+            p = p->next->next;
+        }
+
+        p = head;
+        Node* res = head->next;
+        Node* yuanNode = nullptr;
+        Node* newNode = nullptr;
+        while (p) {
+            yuanNode = p->next->next;
+            newNode = p->next;
+            p->next = yuanNode;
+            newNode->next = yuanNode ? yuanNode->next : nullptr;
+            p = p->next;
+        }
+        return res;
+    }
+};
 int main(){
 
     system("pause");

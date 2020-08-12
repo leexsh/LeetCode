@@ -31,6 +31,30 @@ public:
     int val;
     ListNode *next;
 };
+
+class Solution1 {
+public:
+    ListNode *detectCycle(ListNode *head) {
+        if (!head || !head->next) {
+            return nullptr;
+        }
+        ListNode* fast = head;
+        ListNode* slow = head;
+        while (fast && fast->next) {
+            fast = fast->next->next;
+            slow = slow->next;
+            if (fast == slow) {
+                fast = head;
+                while (fast != slow) {
+                    fast = fast->next;
+                    slow = slow->next;
+                }
+                return fast;
+            }
+        }
+        return nullptr;
+    }
+};
 // set
 ListNode *detectCycle1(ListNode *head) {
     if(head == NULL){

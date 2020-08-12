@@ -49,6 +49,25 @@ vector<int> inorderTraversal(TreeNode* root) {
     return vec;
 }
 
+vector<int> inorderTraversal1(TreeNode* root) {
+    vector<int> res;
+    if (!root) {
+        return res;
+    }
+    stack<TreeNode*> st;
+    while (!st.empty() || root) {
+        while (root) {
+            st.push(root);
+            root = root->left;
+        }
+        root = st.top();
+        st.pop();
+        res.push_back(root->val);
+        root = root->right;
+
+    }
+    return res;
+}
 
 // 递归
 void FindNode(TreeNode*root,vector<int>& Node)
