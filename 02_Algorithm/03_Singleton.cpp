@@ -24,13 +24,13 @@ Singleton1 Singleton1::instance = new Singleton1;
 
 
 
-// 懒汉模式 多线程下 非线程安全的
+// e汉模式 多线程下 非线程安全的
 class Singleton
 {
 public:
     static Singleton* getInstance(){
         if (instance == nullptr) {
-            instance = new *Singleton;
+            instance = new Singleton;
             return instance;
         }
     }
@@ -38,7 +38,7 @@ private:
     static Singleton *instance;
     Singleton(){}
     Singleton(const Singleton &);
-    Singleton& operator=(cosnt Singleton&);
+    Singleton& operator=(const Singleton&);
 
 };
 Singleton* Singleton::instance = nullptr;

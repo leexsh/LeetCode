@@ -76,6 +76,7 @@ public:
             i--;
             j++;
         }
+//        j-1 - (i+1) + 1 = j - i - 1;
         return s.substr(i + 1, j - i - 1);
     }
     string longestPalindrome(string s) {
