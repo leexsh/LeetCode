@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "D:/Code/LeetCode/medium/5-LongestPalindromicSubstring.cpp" "D:/Code/LeetCode/cmake-build-debug/CMakeFiles/main.dir/medium/5-LongestPalindromicSubstring.cpp.obj"
+  "D:/Code/LeetCode/main.cpp" "D:/Code/LeetCode/cmake-build-debug/CMakeFiles/main.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -19,6 +19,40 @@ LeetCode-33 题目：搜索旋转排序数组
 思路：
     分别在两个区间上二分
  */
+class Solution {
+public:
+    int search(vector<int>& nums, int target) {
+        if (nums.empty()) {
+            return -1;
+        }
+
+        if (nums.size() == 1) {
+            return nums[0] == target ? 0 : -1;
+        }
+        int l = 0;
+        int r = nums.size() - 1;
+        while (l != r) {
+            int mid = l + (r - l) / 2;
+            if (nums[mid] == target) {
+                return mid;
+            }
+            if (nums[0] < nums[mid]) {
+                if (nums[0] <= target && target <= nums[mid]) {
+                    r = mid;
+                } else {
+                    l = mid;
+                }
+            } else {
+                if (nums[mid]<=target && target <= nums[r]) {
+                    l =  mid;
+                } else {
+                    r = mid;
+                }
+            }
+        }
+        return -1;
+    }
+};
 
 // 时间复杂度为O(N)
 int search(vector<int>& nums, int target) {

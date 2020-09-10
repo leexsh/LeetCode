@@ -36,6 +36,27 @@ public:
         return res;
     }
 };
+
+class Solution1 {
+public:
+    vector<vector<int>> merge(vector<vector<int>>& intervals) {
+        if (intervals.empty()) {
+            return {};
+        }
+        sort(intervals.begin(), intervals.end());
+
+        vector<vector<int>> res;
+        for (int i = 0; i < intervals.size(); ++i) {
+            int L = intervals[i][0], R = intervals[i][1];
+            if (res.empty() || res.back()[1] < L) {
+                res.push_back({L, R});
+            } else {
+                res.back()[1] = max(R, res.back()[1]);
+            }
+        }
+        return res;
+    }
+};
 int main(){
 
     return 0;

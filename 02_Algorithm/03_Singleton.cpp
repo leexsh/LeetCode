@@ -33,6 +33,7 @@ public:
             instance = new Singleton;
             return instance;
         }
+        return instance;
     }
 private:
     static Singleton *instance;
@@ -58,6 +59,7 @@ public:
                 return instance;
             }
         }
+        return instance;
     }
 private:
     Singleton2(){}
@@ -68,7 +70,7 @@ private:
 Singleton2* Singleton2::instance = nullptr;
 
 // 懒汉模式  双检锁 + 自动回收
-class Singleton3()
+class Singleton3
 {
 public:
     static Singleton3* getInstance()
@@ -76,7 +78,7 @@ public:
         if (instance == nullptr) {
             lock_guard<mutex> lg(mt);
             if (instance == nullptr) {
-                instance = new instance;
+                instance = new Singleton3;
                 return instance;
             }
         }
@@ -92,7 +94,7 @@ public:
 private:
     Singleton3(){}
     Singleton3(const Singleton3&);
-    Singleton3& operator(const Singleton3&);
+    Singleton3& operator=(const Singleton3&);
     static Singleton3 *instance;
     static GC gc;
 }

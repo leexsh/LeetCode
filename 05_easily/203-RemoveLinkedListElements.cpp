@@ -19,6 +19,27 @@ struct ListNode {
     ListNode *next;
     ListNode(int x) : val(x), next(NULL) {}
 };
+class Solution {
+public:
+    ListNode* removeElements(ListNode* head, int val) {
+        if (!head) {
+            return nullptr;
+        }
+        ListNode* pre = new ListNode(-1);
+        pre->next = head;
+        ListNode* p = pre;
+        while (head) {
+            if (head->val == val) {
+                p->next = head->next;
+                head = p->next;
+            } else {
+                p = head;
+                head = head->next;
+            }
+        }
+        return pre->next;
+    }
+};
 //思路：此题删除链表中元素是很简单的，只需要让待删节点之前一个节点指向待删节点之后一个节点即可。 
 // 此题最大的问题就是，题目要求我们要返回新链表中的头结点，如果我们就采用仅仅复制头结点的方式(用H=head)然后用H进行操作，
 // 最后返回head。这样就会导致如果头结点也是我们需要删除的节点就会导致错误。当然我们可以采用循环操作判断第一个不是我们要删除的节点，

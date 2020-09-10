@@ -32,7 +32,7 @@ public:
         }
 //        将该对象赋值另一个对象
         ++*shared_obj.count;
-//        删除该对象
+//        该对象的引用计数-1
         if(ptr && --*this->count == 0){
             delete ptr;
             delete count;

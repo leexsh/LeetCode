@@ -31,12 +31,32 @@ public:
         for(int i = 1; i < nums.size(); i++){
             for(int j = 0; j < i; j++){
                 if(nums[i] > nums[j]){
-                    dp[i] = max(dp[i], dp[j+1]);
+                    dp[i] = max(dp[i], dp[j] + 1);
                 }
             }
             maxlen = max(maxlen, dp[i]);
         }
         return maxlen;
+    }
+};
+
+class Solution1 {
+public:
+    int lengthOfLIS(vector<int>& nums) {
+        if (nums.empty()) {
+            return 0;
+        }
+        vector<int> dp(nums.size(), 0);
+        int max_len = 1;
+        for (int i = 1; i < nums.size(); ++i) {
+            for (int j = 0; j < i; ++j) {
+                if (nums[j] < nums[i]) {
+                    dp[i] = max(dp[i], dp[j]+1);
+                }
+            }
+            max_len = max(dp[i], max_len);
+        }
+        return max_len;
     }
 };
 int main(){

@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/main.dir/medium/5-LongestPalindromicSubstring.cpp.obj"
+  "CMakeFiles/main.dir/main.cpp.obj"
   "libmain.dll.a"
   "main.exe"
   "main.exe.manifest"

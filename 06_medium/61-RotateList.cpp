@@ -11,7 +11,31 @@ public:
     ListNode *next;
     ListNode(int value) : val(value), next(nullptr){}
 };
-
+class Solution2 {
+public:
+    ListNode* rotateRight(ListNode* head, int k) {
+        if (!head || k == 0) {
+            return head;
+        }
+        int size = 1;
+        ListNode* newnode = head;
+        while (newnode->next) {
+            newnode = newnode->next;
+            size++;
+        }
+        if (k % size == 0) {
+            return head;
+        }
+        newnode->next = head;
+        int m = size - k % size;
+        while (m--) {
+            newnode = newnode->next;
+        }
+        ListNode* res = newnode->next;
+        newnode->next = nullptr;
+        return res;
+    }
+};
 // 借助队列
 class Solution {
 public:
