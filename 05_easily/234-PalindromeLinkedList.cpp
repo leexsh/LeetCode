@@ -25,6 +25,33 @@ struct ListNode {
     ListNode *next;
     ListNode(int x) : val(x), next(NULL) {}
 };
+class Solution {
+public:
+    bool isPalindrome(ListNode* head) {
+        ListNode* q = head;
+        ListNode* pre = nullptr;
+        ListNode* cur = head;
+        while (q && q->next) {
+            q = q->next->next;
+            ListNode* next = cur->next;
+            cur->next = pre;
+            pre = cur;
+            cur = next;
+        }
+        if (q) {
+            cur = cur->next;
+        }
+        while (pre) {
+            if (pre->val != cur->val) {
+                return false;
+            }
+            cur = cur->next;
+            pre = pre->next;
+        }
+        return true;
+    }
+};
+
 
 // 翻转链表
 class Solution {

@@ -42,8 +42,8 @@ void inorder(TreeNode* root)
     stack<TreeNode*> st;
     st.push(root);
     while(!st.empty() || root) {
-        while(root->left) {
-            st.push(root->left);
+        while(root) {
+            st.push(root);
             root = root->left;
         }
         root = st.top();

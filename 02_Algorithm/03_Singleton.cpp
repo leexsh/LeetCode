@@ -11,7 +11,7 @@ class Singleton1{
 public:
     static Singleton1* getInstance()
     {
-        return Singleton1;
+        return instance;
     }
 private:
     Singleton1(){}
@@ -19,7 +19,7 @@ private:
     Singleton1& operator=(const Singleton1&);
     static Singleton1 *instance;
 };
-Singleton1 Singleton1::instance = new Singleton1;
+Singleton1* Singleton1::instance = new Singleton1;
 
 
 
