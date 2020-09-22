@@ -26,8 +26,8 @@ int findMin1(vector<int>& nums) {
     int mid = left;
     int right = nums.size() - 1;
     while(nums[left] > nums[right]){
-        if(right = left == 1){
-            mid = left;
+        if(right - left == 1){
+            mid = right;
             break;
         }
         int mid = left + (right - left) / 2;

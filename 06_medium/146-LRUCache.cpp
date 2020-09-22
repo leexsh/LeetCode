@@ -97,7 +97,7 @@ public:
             map[key] = cache.begin();
         } else {
             if (cache.size() == size) {
-                map.erase(cache.front().first);
+                map.erase(cache.back().first);
                 cache.pop_back();
             }
             cache.push_front(make_pair(key, value));
