@@ -26,39 +26,6 @@ typedef struct TreeNode {
     TreeNode *right;
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 }TreeNode;
-TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder) {
-    // 递归的终止条件
-    if(preorder.empty() || inorder.empty()){
-        return nullptr;
-    }
-    // 构造根节点
-    int rootValue = preorder[0];
-    TreeNode *root = new TreeNode(rootValue);
-    int gen = 0;
-    // 在中序遍历中找到根节点
-    for(int i = 0; i < inorder.size(); i++){
-        if(inorder[i] == rootValue){
-            gen = i;
-            break;
-        }
-    }
-
-    // 根节点的左右子树
-    vector<int> preLeft, preRight, inLeft, inRight;
-    // 确定左子树的集合
-    for(int i = 0; i < gen; i++){
-        preLeft.push_back(preorder[i+1]);
-        inLeft.push_back(inorder[i]);
-    }
-    // 确定右子树的集合
-    for(int i = gen + 1; i < inorder.size(); i++){
-        preRight.push_back(preorder[i]);
-        inRight.push_back(inorder[i]);
-    }
-    root->left = buildTree(preLeft, inLeft);
-    root->right = buildTree(preRight, inRight);
-    return root;
-}
 
 
 int main(){
