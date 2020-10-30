@@ -29,7 +29,11 @@ public:
         int res = 0;
         for (int i = m; i >= 0; --i) {
             for (int j = n; j >= 0; --j) {
-                dp[i][j] = A[i] == B[j] ? dp[i+1][j+1] + 1 : 0;
+                if (A[i] == B[j]) {
+                    dp[i][j] = dp[i+1][j+1];
+                } else {
+                    dp[i][j] = 0;
+                }
                 res = max(res, dp[i][j]);
             }
         }

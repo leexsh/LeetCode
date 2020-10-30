@@ -15,26 +15,3 @@ struct TreeNode {
     TreeNode *right;
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
-class Solution {
-public:
-    ListNode* rotateRight(ListNode* head, int k) {
-        if (!head || k <= 0) {
-            return head;
-        }
-        int size = 1;
-        ListNode* p = head;
-        while (p->next) {
-            p = p->next;
-            size++;
-        }
-        p->next = head;
-        int m = size - k % size;
-        while (m--) {
-            p = p->next;
-        }
-        ListNode* res= p->next;
-        p->next = nullptr;
-        return res;
-    }
-};
-
