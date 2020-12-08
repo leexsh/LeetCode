@@ -15,3 +15,12 @@ struct TreeNode {
     TreeNode *right;
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
+int main(){
+    string str("");
+    for (int i = 0; i < 10; ++i) {
+        str += to_string(i);
+    }
+    cout<<str<<endl;
+    cout<<"cc"<<endl;
+    return 0;
+}
