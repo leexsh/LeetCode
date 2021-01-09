@@ -15,12 +15,25 @@ struct TreeNode {
     TreeNode *right;
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
-int main(){
-    string str("");
-    for (int i = 0; i < 10; ++i) {
-        str += to_string(i);
+
+class Solution {
+public:
+    int getOne(int num) {
+        int res = 0;
+        while (num) {
+            res++;
+            num >>= 1;
+        }
+        return res;
     }
-    cout<<str<<endl;
-    cout<<"cc"<<endl;
+    int findComplement(int num) {
+        int cnt = getOne(num);
+        return num ^ ((long)(1 << cnt) - 1);
+    }
+};
+
+int main(){
+    Solution s;
+    cout<<s.getOne(5)<<endl;
     return 0;
 }
